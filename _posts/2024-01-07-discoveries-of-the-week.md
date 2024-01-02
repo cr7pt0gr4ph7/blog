@@ -1,0 +1,19 @@
+---
+layout: article
+title: Discoveries of the Week &ndash; 2024/01
+tags: ["Discoveries of the Week", "Jekyll"]
+---
+
+This is the first installment of a series where I write down the stuff that
+I stumbled upon during the week, but which was not large enough to warrant its own post.
+
+### #1 &mdash; GitHub Pages and custom gems
+
+While working on this blog, and scratching my head about the build errors
+related to using a custom theme, this article helped me a lot:
+
+> [How to build and deploy GitHub Pages with custom gems](https://www.fatlemon.co.uk/2023/12/custom-gems-with-github-pages/) by [Andrew Freemantle](https://www.fatlemon.co.uk/)
+
+Just note that &ndash; contrary to the linked article &ndash; replacing the `ruby-version: 3.1`
+is neither necessary nor recommended anymore, because [Jekyll](https://jekyllrb.com/) supports Ruby 3.0+ now,
+and Bundler even requires Ruby 3.0+.
