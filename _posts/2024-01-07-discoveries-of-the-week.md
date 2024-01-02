@@ -26,3 +26,7 @@ even better tools for the same job out there.
 
 * [css.glass &ndash; Glassmorphism CSS Generator](https://css.glass/) by [@miketromba](https://twitter.com/miketromba)
 * [box-shadow.dev &ndash; CSS Box Shadows](https://box-shadow.dev/) by [twobeards.dev](https://twobeards.dev/)
+
+Also, a shoutout to the ever-great [css-tricks.com](https://css-tricks.com) with its articles and almanac,
+which is as concise, practical, useful and on-point as ever.
+And who could forget [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS) and [Can I Use ___?](https://caniuse.com/).
