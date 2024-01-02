@@ -3,11 +3,6 @@ layout: article
 title: A New Beginning
 tags: General Personal
 ---
-<!--
-         10        20        30        40        50        60        70        80       90         100       110       120
-123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789
--->
-
 Well, I've finally done it. It took a long time, but now it is here: A personal blog to write down random thoughts,
 discoveries and coding lessons that I stumble upon through my job or through random chance.
 <!--more-->
@@ -27,4 +22,4 @@ I've worked a lot with C# and .NET on the desktop during my previous day job,
 but with a lot of different topics on the side.
 
 I've also dabbled in Go, web design, Android apps, Kotlin, Gradle builds and plugins,
-Infrastructure as Code, VM automation, Python and a bit of machine learning thrown in for good measure.
+Infrastructure as Code, VM automation, Python, and a bit of machine learning thrown in for good measure.
