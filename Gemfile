@@ -8,7 +8,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-# gem "jekyll", "~> 4.3.3"
+gem "jekyll", "~> 4.3.3"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima", "~> 2.5"
@@ -16,7 +16,7 @@ gem "jekyll-text-theme", "~> 2.2"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", group: :jekyll_plugins
+# gem "github-pages", group: :jekyll_plugins
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
@@ -39,3 +39,5 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # Required by Jekyll, otherweise "jekyll serve" fails
 gem "webrick", "~> 1.8"
+
+gem "jekyll-email-protect", "~> 1.1"
