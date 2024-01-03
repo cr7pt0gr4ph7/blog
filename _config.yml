@@ -34,23 +34,25 @@ timezone: Europe/Berlin # see https://en.wikipedia.org/wiki/List_of_tz_database_
 ## => Author and Social
 ##############################
 author:
-  type      : person # "person" (default), "organization"
-  name      : Lukas Waslowski
-  url       : https://taktgeber.it
-  avatar    : # path or url of avatar image (square)
-  bio       : I am a software developer, a dance teacher and a firm believer in lifelong learning.
-  email     : contact@taktgeber.it
-  facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
-  twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
-  weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
-  googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
-  telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
-  medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
-  zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
-  douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
-  linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : cr7pt0gr4ph7 # "user_name" the last part of your profile url, e.g. https://github.com/user_name
-  npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
+  type          : person # "person" (default), "organization"
+  name          : Lukas Waslowski
+  url           : https://taktgeber.it
+  website       : https://taktgeber.it # url of your personal website
+  avatar        : # path or url of avatar image (square)
+  bio           :
+  email         : contact@taktgeber.it
+  facebook      : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
+  twitter       : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
+  weibo         : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
+  googleplus    : # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
+  telegram      : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
+  medium        : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
+  zhihu         : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
+  douban        : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
+  linkedin      : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
+  github        : cr7pt0gr4ph7 # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  stackoverflow : 455269/cr7pt0gr4ph7 # "user_id/user_name" the last two parts of your profile url, e.g. https://stackoverflow.com/users/user_id/user_name
+  npm           : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)

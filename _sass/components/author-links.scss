@@ -1,3 +1,6 @@
+$website-color: $mail-color;
+$stackoverflow-color: $github-color;
+
 .author-links {
     & > ul {
       margin: 0;
@@ -5,6 +8,9 @@
         .mail-button {
           @include clickable($text-color-1, $mail-color);
         }
+        .website-button {
+            @include clickable($text-color-1, $website-color);
+          }
         .facebook-button {
           @include clickable($text-color-1, $facebook-color);
         }
@@ -35,6 +41,9 @@
         .github-button {
           @include clickable($text-color-1, $github-color);
         }
+        .stackoverflow-button {
+            @include clickable($text-color-1, $stackoverflow-color);
+          }
         .npm-button {
           @include clickable($text-color-1, $npm-color);
         }
