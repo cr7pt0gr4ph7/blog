@@ -2,3 +2,184 @@
 permalink: /404
 layout: 404
 ---
+<script type="text/javascript">
+    (function () {
+        var physicsEnabled = false;
+        var mjsLoaded = false;
+        var mjsInitialized = false;
+        var timeoutExpired = false;
+
+        let h1 = document.querySelector(".layout--404 .sign h1");
+        let subtext = document.querySelector(".layout--404 .sign h1 ~ p");
+
+        h1.addEventListener("click", event => {
+            if (!physicsEnabled) {
+                console.log("Enabling physics...");
+                physicsEnabled = true;
+
+                function tryInitPhysics() {
+                    // We initialize the physics when matter.js has been loaded,
+                    // or when the 1s animation timeout has expireed, whichever comes last.
+                    if (!mjsLoaded || !timeoutExpired || mjsInitialized) {
+                        return;
+                    }
+                    mjsInitialized = true;
+
+                    function Rect(x, y, width, height) {
+                        this.x = x;
+                        this.y = y;
+                        this.width = width;
+                        this.height = height;
+                    };
+
+                    Rect.prototype.relativeTo = function (base) {
+                        return new Rect(this.x - base.x, this.y - base.y, this.width, this.height);
+                    };
+
+                    Rect.prototype.roundDown = function () {
+                        return new Rect(Math.floor(this.x), Math.floor(this.y), Math.floor(this.width), Math.floor(this.height));
+                    };
+
+                    Rect.prototype.setPosition = function (x, y) {
+                        return new Rect(x, y, this.width, this.height)
+                    };
+
+                    Rect.prototype.centerOnSelf = function () {
+                        return new Rect(this.x + this.width / 2, this.y + this.height / 2, this.width, this.height);
+                    };
+
+                    Rect.from = function (rect) {
+                        return new Rect(rect.x, rect.y, rect.width, rect.height)
+                    };
+
+                    // Create container element
+                    let outerContainer = document.querySelector(".page__content");
+                    outerContainer.style.position = "relative";
+                    let containerRect = Rect.from(outerContainer.getBoundingClientRect()).roundDown();
+                    let subtextRect = Rect.from(subtext.getBoundingClientRect()).roundDown().relativeTo(containerRect);
+                    let bounds = containerRect.setPosition(0, 0);
+
+                    let container = document.createElement("div");
+                    container.style.position = "absolute";
+                    container.style.top = "0%";
+                    container.style.left = "0%";
+                    container.style.bottom = "100%";
+                    container.style.right = "100%";
+                    container.style.width = "100%";
+                    container.style.height = "100%";
+                    outerContainer.appendChild(container);
+
+                    // Configure physics engine
+                    var Engine = Matter.Engine,
+                        Render = Matter.Render,
+                        Runner = Matter.Runner,
+                        Composite = Matter.Composite,
+                        Composites = Matter.Composites,
+                        Common = Matter.Common,
+                        MouseConstraint = Matter.MouseConstraint,
+                        Mouse = Matter.Mouse,
+                        Bodies = Matter.Bodies;
+
+                    // create engine
+                    var engine = Engine.create(),
+                        world = engine.world;
+
+                    // create renderer
+                    var render = Render.create({
+                        element: container,
+                        engine: engine,
+                        options: {
+                            width: bounds.width,
+                            height: bounds.height,
+                            showAngleIndicator: false,
+                            background: 'transparent',
+                            wireframes: false
+                        }
+                    });
+
+                    Render.run(render);
+
+                    // create runner
+                    var runner = Runner.create();
+                    Runner.run(runner, engine);
+
+                    // add outer boundaries as bodies
+                    let thickness = 50;
+                    let bw = bounds.width;
+                    let bh = bounds.height;
+                    let tk = thickness;
+
+                    Composite.add(world, [
+                        // left
+                        Bodies.rectangle(-tk / 2, bh / 2, tk, bh, { isStatic: true, render: { fillStyle: '#060a19' } }),
+                        // right
+                        Bodies.rectangle(bw + tk / 2, bh / 2, tk, bh, { isStatic: true, render: { fillStyle: '#060a19' } }),
+                        // top
+                        Bodies.rectangle(bw / 2, -tk / 2, bw + tk * 2, tk, { isStatic: true, render: { fillStyle: '#060a19' } }),
+                        // bottom
+                        Bodies.rectangle(bw / 2, bh + tk / 2, bw + tk * 2, tk, { isStatic: true, render: { fillStyle: '#060a19' } })
+                    ]);
+
+                    // add static shapes for the fixed text
+                    let subtextBounds = subtextRect.centerOnSelf();
+                    Composite.add(world, [
+                        Bodies.rectangle(subtextBounds.x, subtextBounds.y, subtextBounds.width, subtextBounds.height, { isStatic: true, render: { fillStyle: 'rgba(255, 128, 0, 0.5)' } })
+                    ]);
+
+                    // add various shapes to play around with
+                    let numColumns = 20;
+                    let columnGap = 10;
+                    var stack = Composites.stack((bw - numColumns * columnGap) / 4, 0, numColumns, 8, columnGap, 10, function (x, y) {
+                        return Bodies.circle(x, y, Common.random(15, 30), { restitution: 0.6, friction: 0.1 });
+                    });
+
+                    Composite.add(world, [
+                        stack,
+                        Bodies.polygon(200, 460, 3, 60),
+                        Bodies.polygon(400, 460, 5, 60),
+                        Bodies.rectangle(600, 460, 80, 80)
+                    ]);
+
+                    // add mouse control
+                    var mouse = Mouse.create(render.canvas),
+                        mouseConstraint = MouseConstraint.create(engine, {
+                            mouse: mouse,
+                            constraint: {
+                                stiffness: 0.2,
+                                render: {
+                                    visible: false
+                                }
+                            }
+                        });
+
+                    Composite.add(world, mouseConstraint);
+
+                    // keep the mouse in sync with rendering
+                    render.mouse = mouse;
+                }
+
+
+                // begin animation
+                h1.classList.add("animate-as-activated");
+                setTimeout(() => {
+                    timeoutExpired = true;
+                    tryInitPhysics();
+                }, 1800);
+
+                // Load matter.js
+                let mjsImport = document.createElement("script");
+                mjsImport.setAttribute("type", "text/javascript");
+                mjsImport.setAttribute("src", "/assets/js/matter.min.js");
+                mjsImport.setAttribute("async", "async");
+
+                // Asynchronously execute the remaining code after matter.js has been loaded
+                mjsImport.addEventListener("load", () => {
+                    mjsLoaded = true;
+                    tryInitPhysics();
+                });
+
+                document.body.appendChild(mjsImport);
+            }
+        });
+    })();
+</script>
