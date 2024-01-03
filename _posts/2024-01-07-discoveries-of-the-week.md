@@ -26,6 +26,10 @@ even better tools for the same job out there.
 
 * [css.glass &ndash; Glassmorphism CSS Generator](https://css.glass/) by [@miketromba](https://twitter.com/miketromba)
 * [box-shadow.dev &ndash; CSS Box Shadows](https://box-shadow.dev/) by [twobeards.dev](https://twobeards.dev/)
+* [Animista &ndash; On-Demand CSS Animations Library](https://animista.net) by [Ana Travas](https://twitter.com/ana108)
+* [gradient-animator.com &ndash; CSS Gradient Animatior](https://www.gradient-animator.com/) by [Ian Forest](https://www.buymeacoffee.com/ianforrest)
+* [gradient.style &ndash; CSS HD Gradients](https://gradient.style/)
+* [cssgradient.io &ndash; CSS Gradient Creator](https://cssgradient.io/)
 
 Also, a shoutout to the ever-great [css-tricks.com](https://css-tricks.com) with its articles and almanac,
 which is as concise, practical, useful and on-point as ever.
