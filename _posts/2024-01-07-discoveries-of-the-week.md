@@ -42,5 +42,13 @@ I was really amazed by how well some web applications simulate the look-and-feel
 Here are some of my personal favorites: 
 
 * [Fluid Paint](https://david.li/paint/) by [David Li](https://david.li/).
+
+### #4 &mdash; SVG Utilities
+
+While designed the aforementioned business card with [Inkscape](https://inkscape.org), I also found the following tools
+very helpful:
  
+* [SVGOMG &ndash; SVGGO's Missing GUI](https://jakearchibald.github.io/svgomg/), which is a one-page web app
+  based on the [svgo](https://github.com/svg/svgo) SVG Optimizer Node.js package.
+
 That's it for this week. See you next time!
