@@ -35,13 +35,17 @@ Also, a shoutout to the ever-great [css-tricks.com](https://css-tricks.com) with
 which is as concise, practical, useful and on-point as ever.
 And who could forget [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS) and [Can I Use ___?](https://caniuse.com/).
 
-### #3 &mdash; Paint Simulations
+### #3 &mdash; Paint Simulations & Visual Inspiration
 
 In the course of designing a business card and experimenting with different stuff while trying to achieve a natural look,
 I was really amazed by how well some web applications simulate the look-and-feel of actual, pyhsical paint.
 Here are some of my personal favorites: 
 
 * [Fluid Paint](https://david.li/paint/) by [David Li](https://david.li/).
+
+And if you need some other mesmerizing stuff to look at, these websites got you covered:
+
+* [WebGL Fluid Simulation](https://paveldogreat.github.io/WebGL-Fluid-Simulation/)
 
 ### #4 &mdash; SVG Utilities
 
