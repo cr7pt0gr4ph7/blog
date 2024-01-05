@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+{%- include snippets/get-nav-url.html path=page.redirect_to -%}
+{%- assign _url = __return -%}
 <meta charset="utf-8">
-<title>Redirecting to {{ redirect_to }}</title>
-<meta http-equiv="refresh" content="0; URL={{ redirect_to }}">
-<link rel="canonical" href="{{ redirect_to }}">
+<title>Redirecting to {{ _url }}</title>
+<meta http-equiv="refresh" content="0; URL={{ _url }}">
+<link rel="canonical" href="{{ _url }}">
