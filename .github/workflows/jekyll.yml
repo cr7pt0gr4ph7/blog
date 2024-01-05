@@ -44,7 +44,8 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Setup tokens
         shell: bash
-        run: echo "google_site_verification: ${{ secrets.GOOGLE_SITE_VERIFICATION }}" > _config_temp.yml
+        run: |
+          echo "google_site_verification: ${{ secrets.GOOGLE_SITE_VERIFICATION }}" > _config_temp.yml
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --config _config.yml,_config_temp.yml --baseurl "${{ steps.pages.outputs.base_path }}"
