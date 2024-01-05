@@ -65,7 +65,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   function clear() {
     $result.html(null);
     $resultItems = $('.search-result__item'); activeIndex = 0;
-    $searchExternalLink.href('#');
+    $searchExternalLink.attr('href', '#');
     $searchExternal.removeClass('visible');
   }
   function onInputNotEmpty(val) {
