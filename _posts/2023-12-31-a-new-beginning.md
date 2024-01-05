@@ -22,4 +22,6 @@ I've worked a lot with C# and .NET on the desktop during my previous day job,
 but with a lot of different topics on the side.
 
 I've also dabbled in Go, web design, Android apps, Kotlin, Gradle builds and plugins,
-Infrastructure as Code, VM automation, Python, and a bit of machine learning thrown in for good measure.
+Infrastructure as Code, VM automation, Ruby, Python, and a bit of machine learning thrown in for good measure.
+
+###### Thank you for stopping by, and see you again in the future!<br>&mdash; Lukas Waslowski
