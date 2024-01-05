@@ -58,13 +58,21 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 
   // search box
   var $result = $('.js-search-result'), $resultItems;
+  var $searchExternal = $('.search-external');
+  var $searchExternalLink = $('.search-external-link');
   var lastActiveIndex, activeIndex;
 
   function clear() {
     $result.html(null);
     $resultItems = $('.search-result__item'); activeIndex = 0;
+    $searchExternalLink.href('#');
+    $searchExternal.removeClass('visible');
   }
   function onInputNotEmpty(val) {
+    var baseUrl = "{{ site.url }}{{ site.baseurl }}";
+    $searchExternalLink.href('https://www.google.com/?q=inurl:' + encodeURIComponent(baseUrl) + "%20" + encodeURIComponent(val));
+    $searchExternal.addClass('visible');
+
     $result.html(render(searchByQuery(val)));
     $resultItems = $('.search-result__item'); activeIndex = 0;
     $resultItems.eq(0).addClass('active');
