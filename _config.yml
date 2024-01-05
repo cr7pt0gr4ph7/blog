@@ -21,9 +21,12 @@ highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "t
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : /blog # does not include hostname
 title   : Insights into a Coder's Brain
+tagline : A personal blog about coding and my journey with different technologies and frameworks.
 description: > # this means to ignore newlines until "Language & timezone"
   A personal blog about coding and my journey with different technologies and frameworks.
 
+twitter:
+  card: summary # "summary", "summary_large_image", "player", "app"
 
 ## => Language and Timezone
 ##############################
@@ -225,5 +228,6 @@ plugins:
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-seo-tag
   - jekyll-sitemap
   - jemoji
