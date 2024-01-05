@@ -41,5 +41,5 @@ header:
       fr-LU   : *FR
       tr      : &TR       Hakkında
       # @end locale config
-    url: 2023/12/31/a-new-beginning.html
+    url: 2023/12/31/a-new-beginning
     # url: /about
