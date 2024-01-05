@@ -69,7 +69,11 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
     $searchExternal.removeClass('visible');
   }
   function onInputNotEmpty(val) {
-    var baseUrl = "{{ site.url }}{{ site.baseurl }}";
+    var siteUrl = "{{ site.url }}";
+    if (siteUrl == "") {
+      siteUrl = window.location.origin;
+    }
+    var baseUrl = siteUrl + "{{ site.baseurl }}";
     $searchExternalLink.attr('href', 'https://www.google.com/?q=inurl:' + encodeURIComponent(baseUrl) + "%20" + encodeURIComponent(val));
     $searchExternal.addClass('visible');
 
