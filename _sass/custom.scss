@@ -1,3 +1,20 @@
+/*************************
+ * Customize search form *
+ *************************/
+
+.search-external {
+    font-size: 0.8rem;
+    margin-top: -0.95rem;
+    margin-bottom: 1em;
+    margin-left: 1.8rem;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.search-external.visible {
+    opacity: 1;
+}
+
 /***********************
  * 404 Page Easter Egg *
  ***********************/
