@@ -1,3 +1,31 @@
+/********************
+ * Customize <code> *
+ ********************/
+
+code {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/*****************************
+ * Customize and fix the TOC *
+ *****************************/
+
+/* Fix text-overflow: ellipsis */
+ul.toc {
+
+    .toc-h2 a,
+    .toc-h3 a,
+    .toc-h4 a,
+    .toc-h5 a,
+    .toc-h6 a {
+        text-overflow: inherit;
+        width: 100%;
+        display: inline-block;
+        overflow: hidden;
+    }
+}
+
 /*************************
  * Customize search form *
  *************************/
