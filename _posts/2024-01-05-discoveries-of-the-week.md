@@ -2,6 +2,11 @@
 layout: article
 title: Discoveries of the Week &ndash; 2024/01
 tags: ["Discoveries of the Week", "Jekyll", "CSS"]
+excerpt: |
+    This is the first installment of a series where I write down the stuff that
+    I stumbled upon during the week, but which was not large enough to warrant its own post.
+    In this post, we start out with: GitHub Pages and custom gems, Awesome CSS-related websites,
+    Paint Simulations & SVG utilities.
 ---
 
 This is the first installment of a series where I write down the stuff that
