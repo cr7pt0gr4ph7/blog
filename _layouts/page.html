@@ -186,18 +186,45 @@ layout: base
                 {%- endif -%}
               {%- endif -%}
                   <div class="hero__content">
-                    {%- if _full_width == false -%}
-                      <div class ="main">
-                    {%- endif -%}
-                      {%- if _article_info_before_title == true -%}
+                    {%- if _article_info_before_title == true -%}
+                      <div class="article__info_container">
+                        {%- if _full_width == false -%}
+                          <div class ="main">
+                        {%- endif -%}
                         {%- include article-info.html article=page semantic=false -%}
+                        {%- if _full_width == false -%}
+                          </div>
+                        {%- endif -%}
+                        </div>
+                    {%- endif -%}
+                    <div class="article__header_container">
+                      {%- if _full_width == false -%}
+                        <div class ="main">
                       {%- endif -%}
                       {%- include article-header.html article=page semantic=false -%}
-                      {%- unless _article_info_before_title == true -%}
+                      {%- if _full_width == false -%}
+                        </div>
+                      {%- endif -%}
+                    </div>
+                    {%- unless _article_info_before_title == true -%}
+                      <div class="article__info_container">
+                        {%- if _full_width == false -%}
+                          <div class ="main">
+                        {%- endif -%}
                         {%- include article-info.html article=page semantic=false -%}
-                      {%- endunless -%}
+                        {%- if _full_width == false -%}
+                          </div>
+                        {%- endif -%}
+                      </div>
+                    {%- endunless -%}
                       {%- if page.excerpt and _article_header_show_excerpt -%}
-                        <p class="overlay__excerpt">{{ page.excerpt | strip_html | strip_newlines | strip | truncate: _article_header_excerpt_truncate }}</p>
+                        {%- if _full_width == false -%}
+                          <div class ="main">
+                        {%- endif -%}
+                            <p class="overlay__excerpt">{{ page.excerpt | strip_html | strip_newlines | strip | truncate: _article_header_excerpt_truncate }}</p>
+                        {%- if _full_width == false -%}
+                          </div>
+                        {%- endif -%}
                       {%- endif -%}
                       {%- if page.article_header.actions -%}
                         <ul class="menu">
@@ -209,9 +236,6 @@ layout: base
                           {%- endfor -%}
                         </ul>
                       {%- endif -%}
-                    {%- if _full_width == false -%}
-                      </div>
-                    {%- endif -%}
                   </div>
                 </div>
               </div>
