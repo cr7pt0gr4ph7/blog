@@ -1,0 +1,33 @@
+.main {
+    width: 100%;
+    max-width: map-get($layout, content-max-width);
+    padding-left: map-get($spacers, 5);
+    padding-right: map-get($spacers, 5);
+    margin-left: auto;
+    margin-right: auto;
+    @include media-breakpoint-down(lg) {
+      padding-left: map-get($spacers, 4);
+      padding-right: map-get($spacers, 4);
+    }
+    @include media-breakpoint-down(md) {
+      padding-right: map-get($spacers, 3);
+      padding-right: map-get($spacers, 3);
+    }
+  }
+  
+  .has-aside {
+    .main {
+      max-width: map-get($layout, content-max-width) + map-get($layout, aside-width);
+      @include media-breakpoint-down(lg) {
+        max-width: map-get($layout, content-max-width);
+      }
+    }
+  }
+  
+  .full-width {
+    .main {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
