@@ -162,25 +162,27 @@ layout: base
                 {%- assign _header_class = 'article__header--with-background' -%}
               {%- endif -%}
 
+              {%- assign _header_class = _header_class | append: ' overlay' -%}
+
               <div class="article__header--overlay">
 
               {%- if _article_header_theme == 'light' -%}
                 {%- if _article_header_align == 'center' -%}
-                  <div class="hero hero--center hero--light overlay {{ _header_class }}" style="{{ _header_style }}">
+                  <div class="hero hero--center hero--light {{ _header_class }}" style="{{ _header_style }}">
                 {%- else -%}
-                  <div class="hero hero--light overlay {{ _header_class }}" style="{{ _header_style }}">
+                  <div class="hero hero--light {{ _header_class }}" style="{{ _header_style }}">
                 {%- endif -%}
               {%- elsif _article_header_theme == 'dark' -%}
                 {%- if _article_header_align == 'center' -%}
-                  <div class="hero hero--center hero--dark overlay {{ _header_class }}" style="{{ _header_style }}">
+                  <div class="hero hero--center hero--dark {{ _header_class }}" style="{{ _header_style }}">
                 {%- else -%}
-                  <div class="hero hero--dark overlay {{ _header_class }}" style="{{ _header_style }}">
+                  <div class="hero hero--dark {{ _header_class }}" style="{{ _header_style }}">
                 {%- endif -%}
               {%- else -%}
                 {%- if _article_header_align == 'center' -%}
-                  <div class="hero hero--center overlay {{ _header_class }}" style="{{ _header_style }}">
+                  <div class="hero hero--center {{ _header_class }}" style="{{ _header_style }}">
                 {%- else -%}
-                  <div class="hero overlay {{ _header_class }}" style="{{ _header_style }}">
+                  <div class="hero {{ _header_class }}" style="{{ _header_style }}">
                 {%- endif -%}
               {%- endif -%}
                   <div class="hero__content">
