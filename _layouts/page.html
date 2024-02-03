@@ -119,6 +119,8 @@ layout: base
               {%- assign _article_header_align = page.article_header.align | default: layout.article_header.align | default: site.data.variables.default.page.article_header.align -%}
               {%- assign _article_header_theme = page.article_header.theme | default: layout.article_header.theme | default: site.data.variables.default.page.article_header.theme -%}
 
+              {%- assign _header_class = '' -%}
+
               {%- if page.article_header.background_image.src -%}
                 {%- assign _header_background_image_src = page.article_header.background_image.src -%}
               {%- elsif page.article_header.background_image != false and page.cover -%}
@@ -139,35 +141,46 @@ layout: base
                   | append: 'url(' | append: _header_background_image_src  | append: ')'-%}
               {%- endif -%}
 
-              {%- assign _header_style = 'background-image:' | append: _header_background_image | append: ';' -%}
+              {%- if _header_background_image -%}
+                {%- assign _header_class = 'article__header--with-background' -%}
+              {%- endif -%}
+
+              {%- assign _header_style = '--background-image:' | append: _header_background_image | append: ';' -%}
 
               {%- if page.article_header.background_color -%}
-                {%- assign _header_style = _header_style | append: 'background-color:' | append: page.article_header.background_color | append: ';' -%}
+                {%- assign _header_style = _header_style | append: '--background-color:' | append: page.article_header.background_color | append: ';' -%}
+                {%- assign _header_class = 'article__header--with-background' -%}
+              {%- endif -%}
+
+              {%- if page.article_header.background_image.alignment -%}
+                {%- assign _header_style = _header_style | append: '--background-position:0% ' | append: page.article_header.background_image.alignment | append: ';' -%}
+                {%- assign _header_class = 'article__header--with-background' -%}
               {%- endif -%}
 
               {%- if _article_header_height -%}
                 {%- assign _header_style = _header_style | append: 'min-height:' | append: _article_header_height | append: ';' -%}
+                {%- assign _header_class = 'article__header--with-background' -%}
               {%- endif -%}
 
               <div class="article__header--overlay">
 
               {%- if _article_header_theme == 'light' -%}
                 {%- if _article_header_align == 'center' -%}
-                  <div class="hero hero--center hero--light overlay" style="{{ _header_style }}">
+                  <div class="hero hero--center hero--light overlay {{ _header_class }}" style="{{ _header_style }}">
                 {%- else -%}
-                  <div class="hero hero--light overlay" style="{{ _header_style }}">
+                  <div class="hero hero--light overlay {{ _header_class }}" style="{{ _header_style }}">
                 {%- endif -%}
               {%- elsif _article_header_theme == 'dark' -%}
                 {%- if _article_header_align == 'center' -%}
-                  <div class="hero hero--center hero--dark overlay" style="{{ _header_style }}">
+                  <div class="hero hero--center hero--dark overlay {{ _header_class }}" style="{{ _header_style }}">
                 {%- else -%}
-                  <div class="hero hero--dark overlay" style="{{ _header_style }}">
+                  <div class="hero hero--dark overlay {{ _header_class }}" style="{{ _header_style }}">
                 {%- endif -%}
               {%- else -%}
                 {%- if _article_header_align == 'center' -%}
-                  <div class="hero hero--center overlay" style="{{ _header_style }}">
+                  <div class="hero hero--center overlay {{ _header_class }}" style="{{ _header_style }}">
                 {%- else -%}
-                  <div class="hero overlay" style="{{ _header_style }}">
+                  <div class="hero overlay {{ _header_class }}" style="{{ _header_style }}">
                 {%- endif -%}
               {%- endif -%}
                   <div class="hero__content">
