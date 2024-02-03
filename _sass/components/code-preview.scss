@@ -1,0 +1,129 @@
+/***************************************
+ * Small title above each code snippet *
+ ***************************************/
+
+%show-code-block-title {
+    margin-top: 1.25rem;
+
+    &::before {
+        content: var(--language-title) var(--sample-code-title-suffix);
+        display: block;
+        font-weight: bold;
+        font-size: 0.75rem;
+        line-height: calc(1.6/0.75);
+        color: #bbbbbb;
+        padding-left: 0.1rem;
+    }
+}
+
+.sample-preview {
+    &[data-sample-id],
+    &.show-code-block-title {
+        @extend %show-code-block-title;
+    }
+}
+
+.language-css,
+.language-html,
+.language-js {
+    &.hidden {
+        display: none;
+    }
+
+    &[data-sample-id],
+    &.show-code-block-title {
+        @extend %show-code-block-title;
+
+        &:hover {
+            pre.highlight {
+                box-shadow: inset 0px 0px 1px 0px rgba(0, 0, 0, 0.1);
+            }
+
+            &::before {
+                color: #b5b5b5;
+            }
+        }
+    }
+}
+
+.language-css {
+    --language-title: "CSS";
+}
+
+.language-html {
+    --language-title: "HTML";
+}
+
+.language-js {
+    --language-title: "JS";
+}
+
+.sample-preview {
+    --language-title: "Result";
+}
+
+/*************************
+ * Hide boilerplate code *
+ *************************/
+
+:root {
+    --sample-code-title-suffix: "";
+}
+
+details.boilerplate-code {
+    --sample-code-title-suffix: " (Additional boilerplate code)";
+
+    .boilerplate-content {
+        margin-top: 0.25rem;
+        background-color: #eee;
+        border-radius: 0.4rem;
+        padding: 1rem;
+
+        >p:first-child {
+            margin-top: 0;
+        }
+
+        .subtle-text {
+            color: #666666;
+        }
+    }
+
+    >summary {
+        font-size: 1rem;
+        line-height: calc(1.6/0.75);
+        color: #bbbbbb;
+
+        &:hover {
+            color: #aaaaaa;
+            cursor: pointer;
+        }
+    }
+}
+
+/****************************
+ * Style the preview window *
+ ****************************/
+
+.sample-preview {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+
+    &[data-sample-comment] {
+        --sample-code-title-suffix: " \2022  " attr(data-sample-comment);
+    }
+
+    .iframe-container {
+        border-radius: 0.4rem;
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+        background-color: #d4d4d4;
+        height: 100%;
+    }
+
+    iframe {
+        border: none;
+        height: 100%;
+        width: 100%;
+        flex-grow: 1;
+    }
+}

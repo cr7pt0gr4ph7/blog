@@ -1,10 +1,23 @@
+@import "components/code-preview.scss";
+
 /********************
  * Customize <code> *
  ********************/
 
 code {
-    font-size: 0.9rem;
+    font-size: 0.9em;
     line-height: 1.4;
+}
+
+%html-heading code {
+    background: none !important;
+    font-size: 1em;
+    line-height: inherit;
+    color: #777777;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    @extend %html-heading;
 }
 
 /*****************************
