@@ -21,6 +21,11 @@ layout: base
 {%- endif -%}
 
 {%- include snippets/assign.html
+  target = site.data.variables.default.page.article_header.show_excerpt
+  source0=layout.article_header.show_excerpt source1=page.article_header.show_excerpt -%}
+{%- assign _article_header_show_excerpt = __return -%}
+
+{%- include snippets/assign.html
   target=layout.header source0=page.header -%}
 {%- assign _header = __return -%}
 
@@ -176,7 +181,7 @@ layout: base
                       {%- unless _article_info_before_title == true -%}
                         {%- include article-info.html article=page semantic=false -%}
                       {%- endunless -%}
-                      {%- if page.excerpt -%}
+                      {%- if page.excerpt and _article_header_show_excerpt -%}
                         <p class="overlay__excerpt">{{ page.excerpt | strip_html | strip_newlines | strip | truncate: _article_header_excerpt_truncate }}</p>
                       {%- endif -%}
                       {%- if page.article_header.actions -%}
@@ -286,7 +291,7 @@ layout: base
 
 {%- if page.aside -%}
 <script>
-  /* toc must before affix, since affix need to konw toc' height. */
+  /* toc.js must be invoked before affix.js, since affix.js needs to know the TOC's height. */
   {%- if page.aside.toc -%}{%- include scripts/aside/toc.js -%}{%- endif -%}
   {%- include scripts/aside/affix.js -%}
 </script>
