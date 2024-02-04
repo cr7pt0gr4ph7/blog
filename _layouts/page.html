@@ -154,12 +154,14 @@ layout: base
 
               {%- if page.article_header.background_image.alignment -%}
                 {%- assign _header_style = _header_style | append: '--background-position:0% ' | append: page.article_header.background_image.alignment | append: ';' -%}
-                {%- assign _header_class = 'article__header--with-background' -%}
+              {%- endif -%}
+
+              {%- if page.article_header.background_image.blur -%}
+                {%- assign _header_style = _header_style | append: '--background-blur:' | append: page.article_header.background_image.blur | append: ';' -%}
               {%- endif -%}
 
               {%- if _article_header_height -%}
                 {%- assign _header_style = _header_style | append: 'min-height:' | append: _article_header_height | append: ';' -%}
-                {%- assign _header_class = 'article__header--with-background' -%}
               {%- endif -%}
 
               {%- assign _header_class = _header_class | prepend: 'small-overlay ' -%}

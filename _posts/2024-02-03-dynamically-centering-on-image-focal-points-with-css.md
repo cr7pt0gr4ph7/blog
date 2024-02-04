@@ -1,6 +1,16 @@
 ---
 layout: article
 title: Dynamically centering an image via CSS
+article_header:
+    type: overlay
+    theme: dark
+    info_before_title: false
+    show_excerpt: false
+    background_color: "#034959"
+    background_image:
+        src: assets/img/posts/2024-02/pexels-pixabay-235990.jpg
+        alignment: 100%
+        blur: 10px
 tags: ["CSS", "In-depth"]
 ---
 

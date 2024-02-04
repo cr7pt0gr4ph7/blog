@@ -1,5 +1,50 @@
 @import "components/code-preview.scss";
 
+/***************************************
+ * Customize the article header layout *
+ ***************************************/
+
+.small-overlay {
+    .hero__content {
+        margin: 0;
+        border-top: 1px solid #ffffff88;
+        border-bottom: 1px solid #ffffff88;
+        // background: linear-gradient(to bottom, transparent 79.99%, #00000000 80%, #88888833 90%, #ffffff88 98%);
+        backdrop-filter: blur(var(--background-blur));
+    }
+
+    .article__header_container {
+        margin: 3rem 0;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .article__info_container {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 0.1rem;
+        padding-bottom: 0.1rem;
+
+        .article__info {
+            color: #333;
+
+            .right-col li {
+                font-weight: 700;
+                line-height: 1 !important;
+                background-color: #f2f2f2;
+                padding: 0.325rem 0.5rem;
+                padding: 0.325rem 0.6rem;
+                border-radius: 6rem;
+            }
+        }
+    }
+}
+
+.hero--dark h1 {
+    color: #fff;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+}
+
 .article__header--with-background {
     background-image: var(--background-image);
     background-color: var(--background-color);
@@ -22,7 +67,12 @@ code {
     color: #777777;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     @extend %html-heading;
 }
 
