@@ -15,13 +15,9 @@
 
     .article__header_container {
         margin: 3rem 0;
-        padding-left: 3rem;
-        padding-right: 3rem;
     }
 
     .article__info_container {
-        padding-left: 3rem;
-        padding-right: 3rem;
         padding-top: 0.1rem;
         padding-bottom: 0.1rem;
 
@@ -42,7 +38,8 @@
                     color: #333;
                 }
 
-                i.fas, i.far {
+                i.fas,
+                i.far {
                     min-width: 1em;
                 }
             }
@@ -79,6 +76,25 @@
 .article__content {
     .subtitle {
         font-size: 2em;
+
+        @include media-breakpoint-down(md) {
+            font-size: 1.5em;
+        }
+    }
+
+    >p:not(.subtitle):first-child {
+        margin-top: 2rem;
+    }
+}
+
+.article__info.article__info--flexbox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    .right-col {
+        margin-left: 0;
     }
 }
 
