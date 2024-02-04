@@ -7,6 +7,14 @@ excerpt: |
     I stumbled upon during the week, but which was not large enough to warrant its own post.
     In this post, we start out with: GitHub Pages and custom gems, Awesome CSS-related websites,
     Paint Simulations & SVG utilities.
+article_header:
+  type: overlay
+  theme: dark
+  background_color: "#364F59"
+  background_image:
+    src: assets/img/posts/2024-01/pexels-scott-webb-1029604.jpg
+    blur: 4px
+    alignment: 100%
 ---
 
 This is the first installment of a series where I write down the stuff that
