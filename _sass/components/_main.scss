@@ -17,9 +17,14 @@
   
   .has-aside {
     .main {
+      --aside-reserved-padding: #{map-get($layout, aside-width)};
       max-width: map-get($layout, content-max-width) + map-get($layout, aside-width);
       @include media-breakpoint-down(lg) {
+        --aside-reserved-padding: 0px;
         max-width: map-get($layout, content-max-width);
+      }
+      &.aside-padding {
+        padding-right: calc(3rem + var(--aside-reserved-padding));
       }
     }
   }

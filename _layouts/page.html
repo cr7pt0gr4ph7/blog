@@ -191,7 +191,7 @@ layout: base
                     </div>
                     {%- unless _article_info_before_title == true -%}
                       <div class="article__info_container">
-                        {%- if _full_width == false -%}<div class="main">{%- endif -%}
+                        {%- if _full_width == false -%}<div class="main aside-padding">{%- endif -%}
                         {%- include article-info.html article=page semantic=false -%}
                         {%- if _full_width == false -%}</div>{%- endif -%}
                       </div>
