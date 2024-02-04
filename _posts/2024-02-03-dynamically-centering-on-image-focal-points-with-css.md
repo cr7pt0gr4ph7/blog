@@ -5,7 +5,6 @@ subtitle: How to use CSS to keep the focal point of a background image visible o
 article_header:
     type: overlay
     theme: dark
-    info_before_title: false
     background_color: "#034959"
     background_image:
         src: assets/img/posts/2024-02/pexels-pixabay-235990.jpg

@@ -21,6 +21,7 @@ default:
     article_header:
       align: left
       theme: light
+      info_before_title: false
     articles:
       show_cover: true
       show_excerpt: false

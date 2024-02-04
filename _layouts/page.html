@@ -9,6 +9,9 @@ layout: base
 {%- unless _article_info_before_title == false -%}
   {%- assign _article_info_before_title = _article_info_before_title | default: layout.article_header.info_before_title -%}
 {%- endunless -%}
+{%- unless _article_info_before_title == false -%}
+  {%- assign _article_info_before_title = _article_info_before_title | default: site.data.variables.default.page.article_header.info_before_title -%}
+{%- endunless -%}
 
 {%- if _article_info_before_title == 'true' or _article_info_before_title == true  -%}
   {%- assign _article_info_before_title = true -%}
