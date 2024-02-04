@@ -27,14 +27,24 @@
 
         .article__info {
             color: #333;
+            color: #666;
 
             .right-col li {
-                font-weight: 700;
+                font-weight: 400;
                 line-height: 1 !important;
                 background-color: #f2f2f2;
                 padding: 0.325rem 0.5rem;
                 padding: 0.325rem 0.6rem;
                 border-radius: 6rem;
+                cursor: default;
+
+                &:hover {
+                    color: #333;
+                }
+
+                i.fas, i.far {
+                    min-width: 1em;
+                }
             }
         }
     }
@@ -49,6 +59,27 @@
     background-image: var(--background-image);
     background-color: var(--background-color);
     background-position: var(--background-position);
+}
+
+.article-author {
+    font-weight: bolder;
+}
+
+.article-author .fa-user-circle {
+    position: relative;
+    top: calc(1rem / 16);
+    min-width: 1rem !important;
+
+    &::before {
+        font-size: 1rem;
+        line-height: 0;
+    }
+}
+
+.article__content {
+    .subtitle {
+        font-size: 2em;
+    }
 }
 
 /********************

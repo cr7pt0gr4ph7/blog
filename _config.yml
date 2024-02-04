@@ -182,6 +182,13 @@ analytics:
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
+## => Reading Time
+##############################
+reading_time:
+  second_plural: "sec"    # default: seconds
+  minute_singular: "min"  # default: minute
+  minute_plural: "min"    # default: minutes
+
 ## => Build
 ##############################
 markdown    : kramdown
@@ -216,6 +223,9 @@ defaults:
       license: true
       aside:
         toc: true
+      author:
+        name: Lukas Waslowski
+      show_excerpt: false
       show_author_profile: false
       show_edit_on_github: false
       show_subscribe: true
