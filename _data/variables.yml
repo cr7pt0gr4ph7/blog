@@ -24,6 +24,7 @@ default:
       info_before_title: false
     articles:
       show_cover: true
+      show_subtitle: true
       show_excerpt: false
       show_readmore: false
       show_info: false
