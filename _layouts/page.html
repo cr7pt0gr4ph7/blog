@@ -29,6 +29,11 @@ layout: base
 {%- assign _article_header_show_excerpt = __return -%}
 
 {%- include snippets/assign.html
+  target = site.data.variables.default.page.article_header.show_subtitle
+  source0=layout.article_header.show_subtitle source1=page.article_header.show_subtitle -%}
+{%- assign _article_header_show_subtitle = __return -%}
+
+{%- include snippets/assign.html
   target=layout.header source0=page.header -%}
 {%- assign _header = __return -%}
 
@@ -201,7 +206,11 @@ layout: base
                         {%- if _full_width == false -%}</div>{%- endif -%}
                       </div>
                     {%- endunless -%}
-                    {%- if page.excerpt and _article_header_show_excerpt -%}
+                    {%- if page.subtitle and _article_header_show_subtitle -%}
+                      {%- if _full_width == false -%}<div class="main">{%- endif -%}
+                      <p class="overlay__excerpt">{{ page.subtitle | strip_html | strip_newlines | strip }}</p>
+                      {%- if _full_width == false -%}</div>{%- endif -%}
+                    {%- elsif page.excerpt and _article_header_show_excerpt -%}
                       {%- if _full_width == false -%}<div class="main">{%- endif -%}
                       <p class="overlay__excerpt">{{ page.excerpt | strip_html | strip_newlines | strip | truncate: _article_header_excerpt_truncate }}</p>
                       {%- if _full_width == false -%}</div>{%- endif -%}
