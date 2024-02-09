@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Dynamically centering an image via CSS
-subtitle: How to use CSS to keep the focal point of a background image visible on different screen sizes
+subtitle: How to keep the focal point of a background image visible on different screen sizes
 article_header:
     type: overlay
     theme: dark
@@ -12,9 +12,6 @@ article_header:
         blur: 10px
 tags: ["CSS", "In-depth"]
 ---
-
-{: .subtitle }
-{{ page.subtitle }}
 
 Well, imagine this: You have website with a big background image, and you want it to work well across all screen sizes.
 That is, it should fill the whole viewport, no matter the screen size or aspect ratio.
