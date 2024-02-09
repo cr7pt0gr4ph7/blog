@@ -199,13 +199,6 @@ layout: base
                       {%- include article-header.html article=page semantic=false -%}
                       {%- if _full_width == false -%}</div>{%- endif -%}
                     </div>
-                    {%- unless _article_info_before_title == true -%}
-                      <div class="article__info_container">
-                        {%- if _full_width == false -%}<div class="main">{%- endif -%}
-                        {%- include article-info.html article=page semantic=false -%}
-                        {%- if _full_width == false -%}</div>{%- endif -%}
-                      </div>
-                    {%- endunless -%}
                     {%- if page.subtitle and _article_header_show_subtitle -%}
                       {%- if _full_width == false -%}<div class="main">{%- endif -%}
                       <p class="overlay__excerpt">{{ page.subtitle | strip_html | strip_newlines | strip }}</p>
@@ -215,6 +208,13 @@ layout: base
                       <p class="overlay__excerpt">{{ page.excerpt | strip_html | strip_newlines | strip | truncate: _article_header_excerpt_truncate }}</p>
                       {%- if _full_width == false -%}</div>{%- endif -%}
                     {%- endif -%}
+                    {%- unless _article_info_before_title == true -%}
+                      <div class="article__info_container">
+                        {%- if _full_width == false -%}<div class="main">{%- endif -%}
+                        {%- include article-info.html article=page semantic=false -%}
+                        {%- if _full_width == false -%}</div>{%- endif -%}
+                      </div>
+                    {%- endunless -%}
                     {%- if page.article_header.actions -%}
                       <ul class="menu">
                         {%- for _action in page.article_header.actions -%}
