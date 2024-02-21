@@ -101,7 +101,14 @@
     flex-wrap: wrap;
     gap: 0.5rem;
 
+    .left-col {
+        float: unset;
+        flex: 1 1 min-content;
+        min-width: min(100%, 300px);
+    }
+
     .right-col {
+        float: unset;
         margin-left: 0;
     }
 }
