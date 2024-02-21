@@ -1,4 +1,5 @@
 ---
+layout: article
 title: "Choosing a cross-platform framework for mobile apps: Expo vs. Compose"
 tags: ["Mobile", "Web Development", "Expo", "React Native", "Compose", "Kotlin", "Android", "iOS"]
 article_header:
