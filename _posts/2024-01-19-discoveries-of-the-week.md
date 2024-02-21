@@ -10,7 +10,6 @@ article_header:
   theme: dark
   background_color: "#364F59"
   background_image:
-    src: assets/img/posts/2024-01/pexels-kelly-2876511.jpg
     src: assets/img/posts/2024-01/pexels-scott-webb-1029604.jpg
     blur: 4px
     alignment: 100%
