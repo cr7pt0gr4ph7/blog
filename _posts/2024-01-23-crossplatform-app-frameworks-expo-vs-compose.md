@@ -8,7 +8,6 @@ article_header:
     background_image:
         src: assets/img/posts/2024-02/pexels-jessica-lewis-thepaintedsquare-583847.jpg
         alignment: 26%
-        blur: 0px
 ---
 
 While toying around with writing a custom note-taking, CRM-like application for my personal use[^1],
