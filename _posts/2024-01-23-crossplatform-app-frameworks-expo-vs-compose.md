@@ -14,7 +14,7 @@ While toying around with writing a custom note-taking, CRM-like application for 
 I was surveying the current landscape of cross-platform frameworks for mobile app plus web development.
 This article is not gonna be a full survey, but my observations about the two top contenders.
 
-[^1]: Although in the end, while I went for an [already existing application][obsidian] instead, that fulfills 99% of my requirements, and is easily extensible via plugins. I'll probably write about my specific plugin setup some time in the future.
+[^1]: Although in the end, I went for an [already existing application][obsidian] instead, that fulfills 99% of my requirements, and is easily extensible via plugins. I'll probably write about my specific plugin setup some time in the future.
 
 ### The requirements
 
