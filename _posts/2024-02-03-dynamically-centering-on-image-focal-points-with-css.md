@@ -252,8 +252,10 @@ img.container {
 <div class="sample-preview" data-sample-comment="Try resizing the image!" data-sample-id="sample-5">
 </div>
 
+{% comment %}
 ### Next time
 
 The next part will cover how to move non-centered focal points towards the center when zooming in to the image.
 
 See you next time!
+{% endcomment %}
