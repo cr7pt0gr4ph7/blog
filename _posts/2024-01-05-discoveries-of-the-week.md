@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Discoveries of the Week &ndash; 2024/01
-tags: ["Discoveries of the Week", "Jekyll", "CSS"]
+tags: ["Discoveries of the Week", "Jekyll", "CSS", "SVG", "Inspiration"]
 excerpt: |
     This is the first installment of a series where I write down the stuff that
     I stumbled upon during the week, but which was not large enough to warrant its own post.
