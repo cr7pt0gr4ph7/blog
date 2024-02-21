@@ -1,6 +1,14 @@
 ---
 title: "Choosing a cross-platform framework for mobile apps: Expo vs. Compose"
 tags: ["Mobile", "Web Development", "Expo", "React Native", "Compose", "Kotlin", "Android", "iOS"]
+article_header:
+    type: overlay
+    theme: dark
+    background_color: "#c6a295"
+    background_image:
+        src: assets/img/posts/2024-02/pexels-jessica-lewis-thepaintedsquare-583847.jpg
+        alignment: 26%
+        blur: 0px
 ---
 
 While toying around with writing a custom note-taking, CRM-like application for my personal use[^1],
