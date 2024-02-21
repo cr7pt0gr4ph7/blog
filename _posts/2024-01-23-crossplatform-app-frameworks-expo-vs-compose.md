@@ -6,7 +6,7 @@ article_header:
     theme: dark
     background_color: "#c6a295"
     background_image:
-        src: assets/img/posts/2024-02/pexels-jessica-lewis-thepaintedsquare-583847.jpg
+        src: assets/img/posts/2024-01/pexels-jessica-lewis-thepaintedsquare-583847.jpg
         alignment: 26%
 ---
 
