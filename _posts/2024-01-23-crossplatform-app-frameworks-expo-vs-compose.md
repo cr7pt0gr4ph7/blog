@@ -7,11 +7,9 @@ While toying around with writing a custom note-taking, CRM-like application for 
 I was surveying the current landscape of cross-platform frameworks for mobile app plus web development.
 This article is not gonna be a full survey, but my observations about the two top contenders.
 
-[^1]: Although in the end, while I went for an [already existing application][obsidian] instead,
-that fulfills 99% of my requirements, and is easily extensible via plugins.
-I'll probably write about my specific plugin setup some time in the future.
+[^1]: Although in the end, while I went for an [already existing application][obsidian] instead, that fulfills 99% of my requirements, and is easily extensible via plugins. I'll probably write about my specific plugin setup some time in the future.
 
-### The "Requirements"
+### The requirements
 
 My requirements for an ideal solution are as follows:
 
@@ -122,10 +120,7 @@ visual feedback on hover for most out-of-the-box controls, which would be import
     and runtimes (NodeJS, Deno, ...), and does not seem to be fragmented between different base frameworks as much as Kotlin[^2].
     It also seems to place a much greater emphasis on portability, which is considered the default instead of the exception.
 
-[^2]: To illustrate this point: If you have a JavaScript library dealing with lists, it will most likely just use the
-standard [Array][mdn-array] object. In Kotlin, you have to ask yourself which collection base libraries it uses,
-and if that base library is already available for your target platform, or if you have to rewite your dependency
-or try to recompile the collection base library yourself.
+[^2]: To illustrate this point: If you have a JavaScript library dealing with lists, it will most likely just use the standard [Array][mdn-array] object. In Kotlin, you have to ask yourself which collection base libraries it uses, and if that base library is already available for your target platform, or if you have to rewite your dependency or try to recompile the collection base library yourself.
 
 [react]: https://react.dev/learn/start-a-new-react-project#expo
 [expo]: https://docs.expo.dev/
