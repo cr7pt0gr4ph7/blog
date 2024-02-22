@@ -35,8 +35,19 @@ layout: page
 
   <div class="layout--articles">
 
-    <h1 style="font-size: min(4rem, (100vw - 3rem) / 950 * 16 * 4);">{{ site.title }}</h1>
-    <h2 style="font-variant: small-caps; color: #888; font-weight: 300;">Most recent posts</h2>
+    {%- if site.title -%}
+      <h1 style="font-size: min(4rem, (100vw - 3rem) / 950 * 16 * 4);">
+        {%- include snippets/get-nav-url.html path=_paths_root -%}
+        <a href="{{ __return }}" style="color: inherit; text-decoration: none;">{{ site.title }}</a>
+      </h1>
+    {%- endif %}
+    <h2 style="font-variant: small-caps; color: #888; font-weight: 300;">
+      {%- if paginator.page > 1 -%}
+        Recent posts | Page {{ paginator.page }}
+      {%- else -%}
+        Most recent posts
+      {%- endif -%}
+    </h2>
 
     {%- if _type == 'grid' -%}
       {%- if page.articles.size == 'sm' -%}
