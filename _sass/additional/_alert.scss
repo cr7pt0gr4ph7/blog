@@ -1,29 +1,68 @@
 .article__content {
-  p.success {
-    padding: map-get($spacers, 2) map-get($spacers, 3);
-    background-color: rgba($green, .1);
-    border: 1px solid $green;
-    border-radius: map-get($base, border-radius);
+  p {
+
+    &.success,
+    &.info,
+    &.warning,
+    &.error {
+      padding: map-get($spacers, 2) map-get($spacers, 3);
+    }
+  }
+  div {
+
+    &.success,
+    &.info,
+    &.warning,
+    &.error {
+      padding: map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 4);
+      margin: map-get($spacers, 3) 0;
+
+      @media print {
+        margin: map-get($spacers, 2) 0;
+      }
+
+      @include block-elements() {
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 
-  p.info {
-    padding: map-get($spacers, 2) map-get($spacers, 3);
-    background-color: rgba($blue, .1);
-    border: 1px solid $blue;
-    border-radius: map-get($base, border-radius);
-  }
+  p,
+  div {
 
-  p.warning {
-    padding: map-get($spacers, 2) map-get($spacers, 3);
-    background-color: rgba($yellow, .1);
-    border: 1px solid $yellow;
-    border-radius: map-get($base, border-radius);
-  }
+    &.success,
+    &.info,
+    &.warning,
+    &.error {
+      border-radius: map-get($base, border-radius);
+      border-width: 1px;
+      border-style: solid;
+    }
 
-  p.error {
-    padding: map-get($spacers, 2) map-get($spacers, 3);
-    background-color: rgba($red, .1);
-    border: 1px solid $red;
-    border-radius: map-get($base, border-radius);
+    &.success {
+      background-color: rgba($green, .1);
+      border-color: $green;
+    }
+
+    &.info {
+      background-color: rgba($blue, .1);
+      border-color: $blue;
+    }
+
+    &.warning {
+      background-color: rgba($yellow, .1);
+      border-color: $yellow;
+    }
+
+    &.error {
+      background-color: rgba($red, .1);
+      border-color: $red;
+    }
   }
 }
