@@ -63,6 +63,7 @@ ul.toc {
   }
 
   .toc-h2 {
+    margin-left: map-get($spacers, 2);
 
     &,
     a {
