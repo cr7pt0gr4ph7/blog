@@ -2,6 +2,11 @@
 layout: article
 title: A New Beginning
 tags: General Personal
+permalink: /articles/a-new-beginning/
+redirect_from:
+  - /articles/a-new-beginning
+  - /2023/12/31/a-new-beginning
+  - /2023/12/31/a-new-beginning/
 ---
 Well, I've finally done it. It took a long time, but now it is here: A personal blog to write down random thoughts,
 discoveries and coding lessons that I stumble upon through my job or through random chance.

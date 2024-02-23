@@ -2,6 +2,13 @@
 type: article
 title: Using SASS files from Ruby gems with Jekyll
 tags: ["Jekyll"]
+permalink: /articles/using-sass-files-from-ruby-gems-with-jekyll/
+redirect_from:
+  - /articles/using-sass-files-from-ruby-gems-with-jekyll
+  - /2024/02/13/using-sass-files-from-ruby-gems-with-jekyll
+  - /2024/02/13/using-sass-files-from-ruby-gems-with-jekyll/
+  - /2024/02/13/jekyll-gem-resolver
+  - /2024/02/13/jekyll-gem-resolver/
 article_header:
   type: overlay
   theme: dark
