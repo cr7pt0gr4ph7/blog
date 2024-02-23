@@ -127,7 +127,7 @@ gem "bootstrap", "~> 5.3.2"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-gem-resolver", "~> 0.0.3"
+  gem "jekyll-gem-resolver", "~> 1.1.1"
   gem "jekyll-autoprefixer", "~> 1.0"
 end
 
