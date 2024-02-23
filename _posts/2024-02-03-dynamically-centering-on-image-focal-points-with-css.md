@@ -3,13 +3,13 @@ layout: article
 title: Dynamically centering an image via CSS
 subtitle: How to keep the focal point of a background image visible on different screen sizes
 article_header:
-    type: overlay
-    theme: dark
-    background_color: "#034959"
-    background_image:
-        src: assets/img/posts/2024-02/pexels-pixabay-235990.jpg
-        alignment: 100%
-        blur: 10px
+  type: overlay
+  theme: dark
+  background_color: "#034959"
+  background_image:
+    src: assets/img/posts/2024-02/pexels-pixabay-235990.jpg
+    alignment: 100%
+    blur: 10px
 tags: ["CSS", "In-depth"]
 ---
 
@@ -23,7 +23,7 @@ In this post, we will first cover how to do this for `background-image`, and at 
 
  If you're interested in the details, read on!
 
-### Using `background-size: cover` to auto-size the image
+# Using `background-size: cover` to auto-size the image
 
 Our first attempt might be using just `background-size: cover` to make the image always fill its container:
 
@@ -142,7 +142,7 @@ body > div {
 ```
 </div></details>
 
-### Centering with `background-position`
+## Centering with `background-position`
 
 We can easily fix the latter problem by using `background-position: 50% 50%` to zoom in
 on the center of the image instead of the top left corner:
@@ -168,7 +168,9 @@ As a bonus, here is the same solution using CSS variables:
 <div class="sample-preview" data-sample-comment="Try resizing the image!" data-sample-id="sample-2">
 </div>
 
-### Non-centered focal points
+## Non-centered focal points
+### Nested heading
+### Nested heading
 
 Okay, that works! But now you have an image where that focal point isn't in the center?
 Well, just set `background-position` to the center, and call it a day:
@@ -185,9 +187,9 @@ Well, just set `background-position` to the center, and call it a day:
 <div class="sample-preview" data-sample-comment="Try resizing the image!" data-sample-id="sample-3">
 </div>
 
-### Final solution&hellip;
+# Final solution&hellip;
 
-#### &hellip;for background images using `background-image`
+## &hellip;for background images using `background-image`
 
 Here is the full solution for `background-image` so far:
 
@@ -213,7 +215,7 @@ Here is the full solution for `background-image` so far:
 <div class="sample-preview" data-sample-comment="Try resizing the image!" data-sample-id="sample-4">
 </div>
 
-#### Bonus: &hellip;for `<img>` tags
+## Bonus: &hellip;for `<img>` tags
 
 We can use basically the same solution for `<img>` tags, by using `object-fit`/`object-position`
 instead of `background-size`/`background-position`:

@@ -17,7 +17,7 @@ This article is not gonna be a full survey, but my observations about the two to
 
 [^1]: Although in the end, I went for an [already existing application][obsidian] instead, that fulfills 99% of my requirements, and is easily extensible via plugins. I'll probably write about my specific plugin setup some time in the future.
 
-### The requirements
+# The requirements
 
 My requirements for an ideal solution are as follows:
 
@@ -47,7 +47,7 @@ My requirements for an ideal solution are as follows:
   - Static type checking is a bonus if it helps me catch errors early, and thus helps me develop faster.
   - A good and mature ecosystem of open source packages readily available for use is a big bonus.
 
-### The first candidate: <img src="{% link assets/img/posts/2024-01/compose-multiplatform-icon.svg %}" height="25"> Jetpack Compose + <img src="{% link assets/img/posts/2024-01/kotlin-icon.svg %}" height="20"> Kotlin Multiplatform
+# The first candidate: <img src="{% link assets/img/posts/2024-01/compose-multiplatform-icon.svg %}" height="25"> Jetpack Compose + <img src="{% link assets/img/posts/2024-01/kotlin-icon.svg %}" height="20"> Kotlin Multiplatform
 
 I originally planned on using [Jetpack Compose][jetpack-compose] / [Kotlin Multiplatform][kotlin-multiplatform],
 but not all Jetpack libraries are [currently available for Multiplatform][jetpack-multiplatform-availability] use,
@@ -65,7 +65,7 @@ and has not always been ported to Kotlin Multiplatform (yet). This made it annoy
 [compose-web]: https://www.jetbrains.com/lp/compose-multiplatform/
 [obsidian]: https://obsidian.md/
 
-#### The Rundown
+## Feature Rundown
 
 - **Platforms:**
   - **Available Platforms:** ✔️ Android, ✔️ iOS, (✅) Web (Available but experimental)
@@ -92,7 +92,7 @@ and has not always been ported to Kotlin Multiplatform (yet). This made it annoy
     which makes looking for usable libraries annoying. Multiplatform compatibility must be chosen explicitly by library authors, instead of being the default.
     So there are multiplatform libraries, but they aren't as numerous as the platform-specific ones.
 
-### The contender: <img src="{% link assets/img/posts/2024-01/expo-icon.svg %}" height="20"> Expo + <img src="{% link assets/img/posts/2024-01/react-icon.svg %}" height="20"> React Native
+# The contender: <img src="{% link assets/img/posts/2024-01/expo-icon.svg %}" height="20"> Expo + <img src="{% link assets/img/posts/2024-01/react-icon.svg %}" height="20"> React Native
 
 While setting up [React][react] for another project, I stumbled upon the [Expo framework][expo],
 which is a cross-platform (Android, iOS, Web) [React Native][react-native] framework for apps.
@@ -106,7 +106,7 @@ You also have access to the big and mature ecosystem of packages on [NPM][npm], 
 All in all, this makes it a real pleasure to work with; my only major complaint is that the web implementation does not provide
 visual feedback on hover for most out-of-the-box controls, which would be important for for any real-world web UIs.
 
-#### The Rundown
+## Feature rundown
 
 - **Platforms:**
   - **Available Platforms:** ✔️ Android, ✔️ iOS, ✔️ Web
@@ -149,13 +149,13 @@ visual feedback on hover for most out-of-the-box controls, which would be import
 [vector-icons-repo]: https://github.com/oblador/react-native-vector-icons
 [vector-icons-docs]: https://oblador.github.io/react-native-vector-icons/
 
-### Summary
+# Summary
 
 All in all, I very much preferred Expo, which is already a mature framework with a very good ecosystem and development experience.
 As mentioned in the footnote[^1], I went with a different route for my note-taking needs,
 but will keep Expo in my toolbelt for the next cross-platform mobile app project.
 
-#### Bonus: Getting Started with Expo
+## Bonus: Getting Started with Expo
 
 Here are some useful links for getting started with Expo app development.
 The list is by no means complete; it just reflects the stuff I was looking for:
