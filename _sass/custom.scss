@@ -143,6 +143,20 @@ h6 {
  * Customize and fix the TOC *
  *****************************/
 
+ .page__aside .toc-aside {
+    padding-top: 2rem;
+
+    &::before {
+        content: "Article contents";
+        display: block;
+        color: #a1a1a1;
+        font-variant: small-caps;
+        font-size: 0.8em;
+        border-bottom: 1px solid #e6e6e6;
+        margin-bottom: 0.5rem;
+    }
+}
+
 /* Fix text-overflow: ellipsis */
 ul.toc {
 
