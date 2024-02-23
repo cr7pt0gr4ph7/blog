@@ -23,7 +23,7 @@ This involves three things (as outlined in the [Bootstrap documentation][bootstr
 2. Turning the SCSS files into pure CSS
 3. Transforming the resulting CSS files using Autoprefixer to add vendor prefixes
 
-### How to: Build Bootstrap from source using Jekyll
+# How to: Build Bootstrap from source using Jekyll
 
 As described by [this blog post][blog-bootstrap-jekyll], that is quite easy:
 
@@ -68,7 +68,11 @@ Instead of just transforming every string starting with `gem:` in the configurat
 or hard-coding the paths where to look for gem references (which would not work well with additional plugins),
 I made the parts of the configuration where gem references are replaced [fully configurable](https://github.com/cr7pt0gr4ph7/jekyll-gem-resolver?tab=readme-ov-file#path-syntax).
 
-#### Caveat: Pinning execjs to `2.7.0`
+# The full setup
+
+<div class="error" markdown="1">
+{:.include-in-toc}
+#### Caveat: Pin execjs to version `2.7.0` to avoid runtime errors
 
 Although not related to my plugin but to `jekyll-autoprefixer`, I hope that this PSA saves some people the headache I had:
 
@@ -82,9 +86,7 @@ to avoid some confusing runtime errors:
 # Required to avoid runtime errors in jekyll-autoprefixer caused by ExecJS 2.8.0 and later
 gem "execjs", "= 2.7.0"
 ```
-
-
-### The full picture
+</div>
 
 My whole setup (excluding totally unrelated parts) for building Bootstrap from the [bootstrap rubygem][bootstrap-gem],
 including Autoprefixer, now looks like this:
@@ -151,7 +153,7 @@ Importing files from the Bootstrap gem looks just like any other SCSS code:
 
 Neat!
 
-### Conclusion
+# Conclusion
 
 I've published the plugin on GitHub and RubyGems.
 You can find the documentation and source code for the plugin [**here**][jekyll-gem-resolver].
