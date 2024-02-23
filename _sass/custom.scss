@@ -161,6 +161,11 @@ h6 {
  * Customize and fix the TOC *
  *****************************/
 
+ .js-page-aside {
+    position: sticky !important;
+    top: 0;
+ }
+
  .page__aside .toc-aside {
     padding-top: 2rem;
 

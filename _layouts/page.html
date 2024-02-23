@@ -300,7 +300,6 @@ layout: base
 
 <script>
   {%- include scripts/lib/scroll-to.js -%}
-  {%- include scripts/lib/affix.js -%}
   {%- include scripts/lib/toc.js -%}
   {%- if _lightbox == true -%}
     {%- include scripts/lib/gallery.js -%}
@@ -317,7 +316,6 @@ layout: base
 <script>
   /* toc.js must be invoked before affix.js, since affix.js needs to know the TOC's height. */
   {%- if page.aside.toc -%}{%- include scripts/aside/toc.js -%}{%- endif -%}
-  {%- include scripts/aside/affix.js -%}
 </script>
 {%- endif -%}
 
