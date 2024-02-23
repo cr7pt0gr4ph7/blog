@@ -139,6 +139,24 @@ h6 {
     @extend %html-heading;
 }
 
+/**************************
+ * Customize the headings *
+ **************************/
+
+.article__content %html-heading {
+    border-bottom-color: transparent;
+    border-bottom: none;
+    padding-bottom: none;
+}
+
+/*****************************
+ * Customize the alert boxes *
+ *****************************/
+
+.small {
+    font-size: 0.8em;
+}
+
 /*****************************
  * Customize and fix the TOC *
  *****************************/
