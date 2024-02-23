@@ -88,7 +88,7 @@ and has not always been ported to Kotlin Multiplatform (yet). This made it annoy
 - **Developer Experience:**
   - **IDE Support** ✔️ (using Android Studio by JetBrains, although there is not yet
   - **UI Preview in the IDE** ✖️ (Has not been adapted to Multiplatform projects yet)
-  - **Quick Iterations** ✖️ (You have to wait for the build to finish, the APK to upload to your phone and install&hell; not unusually slow but definitely not _instant_)
+  - **Quick Iterations** ✖️ (You have to wait for the build to finish, the APK to upload to your phone and install... not unusually slow but definitely not _instant_)
 
 - **Programming Language:**
   - **Language** ✔️ Kotlin is a nice programming language with good documentation.
