@@ -3,14 +3,17 @@ ul.toc {
   margin: 0;
   color: $text-color;
   list-style-type: none;
-  & > li {
+
+  &>li {
     margin: map-get($spacers, 1) / 2 0;
+
     a {
       display: inline-block;
       margin: map-get($spacers, 1) / 4 0;
       text-decoration: none !important;
     }
   }
+
   .toc-h1,
   .toc-h2,
   .toc-h3,
@@ -20,6 +23,7 @@ ul.toc {
     a {
       @include link-colors($text-color, $main-color-1);
     }
+
     &.active {
       a {
         @include link-colors($main-color-1);
@@ -32,43 +36,57 @@ ul.toc {
   .toc-h4,
   .toc-h5,
   .toc-h6 {
-    &, a {
+
+    &,
+    a {
       font-size: map-get($base, font-size-xs);
       font-weight: map-get($base, font-weight);
       line-height: map-get($base, line-height-xs);
     }
   }
+
   .toc-h1 {
     @include split-line(bottom);
     padding: map-get($spacers, 2) 0 map-get($spacers, 1) 0;
     margin-bottom: map-get($spacers, 2);
     color: $text-color-d;
-    &, a {
+
+    &,
+    a {
       font-size: map-get($base, font-size-sm);
       font-weight: map-get($base, font-weight-bold);
       line-height: map-get($base, line-height-sm);
     }
+
     a {
       @include link-colors($text-color-d, $main-color-1);
     }
   }
+
   .toc-h2 {
-    &, a {
+
+    &,
+    a {
       font-weight: map-get($base, font-weight-bold);
     }
   }
+
   .toc-h3 {
     margin-left: map-get($spacers, 3);
   }
+
   .toc-h4 {
     margin-left: map-get($spacers, 3) * 2;
   }
+
   .toc-h5,
   .toc-h6 {
     margin-left: map-get($spacers, 3) * 3;
   }
+
   .toc-h6 {
     color: $text-color-l;
+
     a {
       @include link-colors($text-color-l, $main-color-1);
     }
@@ -76,7 +94,7 @@ ul.toc {
 }
 
 ul.toc--ellipsis {
-  & > li {
+  &>li {
     @include overflow(hidden);
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -84,11 +102,12 @@ ul.toc--ellipsis {
 }
 
 ul.toc--navigator {
-  & > li {
+  &>li {
     a {
       padding-left: map-get($spacers, 2);
       margin: map-get($spacers, 1) 0;
     }
+
     &.active {
       a {
         margin-left: -4px;
@@ -96,26 +115,36 @@ ul.toc--navigator {
       }
     }
   }
+
   .toc-h2,
   .toc-h3,
   .toc-h4 {
     color: $text-color-l;
+
     a {
       @include link-colors($text-color-l);
     }
   }
+
   .toc-h1 {
-    &, a {
+
+    &,
+    a {
       font-size: map-get($base, font-size);
       line-height: map-get($base, line-height);
     }
+
     color: $text-color;
+
     a {
       @include link-colors($text-color-d);
     }
   }
+
   .toc-h2 {
-    &, a {
+
+    &,
+    a {
       font-size: map-get($base, font-size-sm);
       font-weight: map-get($base, font-weight-bold);
       line-height: map-get($base, line-height-sm);
