@@ -169,7 +169,7 @@ h6 {
  .page__aside .toc-aside {
     padding-top: 2rem;
 
-    &::before {
+    &:not(:empty)::before {
         content: "Article contents";
         display: block;
         color: #a1a1a1;
