@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Discoveries of the Week
+title: Discoveries of the Week &ndash; 2024/05
 tags: ["Discoveries of the Week", "CSS", "IMAP"]
 article_header:
   type: overlay
