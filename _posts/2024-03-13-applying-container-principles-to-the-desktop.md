@@ -34,18 +34,18 @@ and then use the resulting immutable images as the basis for your local system.
 > And, given a system that has been running long enough, or has seen any amount of interaction with external interaction or users,
 > there **_will_** absolutely be stuff that no one could have anticipated [^1].
 >
-> (Initial Install) &rarr; Install A &rarr; Install B &rarr; Partially uninstall A &rarr; Install of C that was aborted midway through &rarr; Install of C &rarr; (Probably B and C installed?)
+> _(Initial Install) &rarr; Install A &rarr; Install B &rarr; Partially uninstall A &rarr; Install of C that was aborted midway through &rarr; Install of C &rarr; (Probably B and C installed?)_
 >
 > By instead defining your current system state through a series of clean, well-defined steps
 > from a clean, well-defined starting point, you can avoid this problem entirely.
 >
-> (Initial Install) &rarr; Install A &rarr; (A installed)
+> _(Initial Install) &rarr; Install A &rarr; (A installed)_
 > <br>
-> (Initial Install) &rarr; Install A &rarr; Install B &rarr; (A and B installed)
+> _(Initial Install) &rarr; Install A &rarr; Install B &rarr; (A and B installed)_
 > <br>
-> (Initial Install) &rarr; ~~Install A &rarr;~~ Install B &rarr; (B installed)
+> _(Initial Install) &rarr; ~~Install A &rarr;~~ Install B &rarr; (B installed)_
 > <br>
-> (Initial Install) &rarr; Install B &rarr; Install C &rarr; (B and C installed)
+> _(Initial Install) &rarr; Install B &rarr; Install C &rarr; (B and C installed)_
 >
 > As another benefit, anyone else in your department can use the same base image as you &ndash; which helps to minimize configuration drift within your team.
 
