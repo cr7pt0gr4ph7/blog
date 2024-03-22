@@ -2,6 +2,7 @@
 layout: article
 title: Applying container principles to the desktop
 tags: ["Linux"]
+permalink: /articles/applying-container-principles-to-the-desktop/
 article_header:
   type: overlay
   theme: dark
