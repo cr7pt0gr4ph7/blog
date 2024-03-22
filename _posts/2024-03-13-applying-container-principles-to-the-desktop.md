@@ -61,7 +61,9 @@ Instead of trying to fix something that is broken, I just replace it with a know
 
 Like with Docker in the container world, it's also quite easy to create your own base images
 if the prebuilt ones do not satisfy all of your requirements
-&ndash; which we will cover in a future article.
+&ndash; which will be covered in a [future article].
 
 [^1]: Who would have thought that the driver of the USB soundcard you plugged in two years ago would cause problems
-when you switched to a newer display that also has integrated speakers? Yeah, me neither. 
+when you switched to a newer display that also has integrated speakers? Yeah, me neither.
+
+[future article]: {% link _posts/2024-03-20-creating-your-own-bluefin-distribution.md %}
