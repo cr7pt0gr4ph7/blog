@@ -83,15 +83,12 @@ rpm-ostree rebase ostree-image-signed:docker://ghcr.io/<owner>/bluefin-dx:gts
 # or: rpm-ostree rebase ostree-image-signed:docker://ghcr.io/<owner>/bluefin:gts
 ```
 
-### Step 4.2: Wait for the download to finish & reboot your system
-
 The image download usually takes a few minutes to complete.
 After the download completes, you are free to reboot your system.
 If you want to be clever, you can reboot your system from the command line using `systemctl reboot`.
 
-### Step 4.3: Enjoy your customized system!
-
-After rebooting the system, you now should be running your customized Bluefin image that was built from your GitHub repository!
+After rebooting the system, you now should be running your customized Bluefin image that was built from your GitHub repository.
+Enjoy!
 
 ## Step 5: Keeping the image up-to-date
 
