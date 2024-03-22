@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Non-linear functions on px values in CSS
+title: Non-linear functions on `px` values in CSS
 tags: ["CSS"]
 permalink: /articles/non-linear-functions-on-px-values-in-css/
 article_header:
