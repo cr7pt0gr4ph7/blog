@@ -49,7 +49,7 @@ which is preinstalled in the DevContainer that is configured for the bluefin rep
    Public key also written to cosign.pub
    ```
 
-3. Adapt ` .github/workflows/build.yml` by changing `COSIGN_PRIVATE_KEY: ${{ secrets.SIGNING_SECRET }}` to `COSIGN_PRIVATE_KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}`
+3. Adapt `.github/workflows/build.yml` by changing `COSIGN_PRIVATE_KEY: ${{ secrets.SIGNING_SECRET }}` to `COSIGN_PRIVATE_KEY: ${{ secrets.COSIGN_PRIVATE_KEY }}`.
 
 ### Step 1.3: Remove uncessary build variants (optional)
 
