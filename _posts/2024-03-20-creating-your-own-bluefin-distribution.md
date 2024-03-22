@@ -2,6 +2,7 @@
 layout: article
 title: Creating your own Bluefin distribution
 tags: ["Linux","Bluefin"]
+permalink: /articles/creating-your-own-bluefin-distribution/
 article_header:
   type: overlay
   theme: dark
