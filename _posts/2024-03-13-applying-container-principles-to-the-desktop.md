@@ -7,8 +7,7 @@ article_header:
   theme: dark
   background_color: "#364F59"
   background_image:
-    src: assets/img/posts/2024-01/pexels-scott-webb-1029604.jpg
-    blur: 4px
+    src: assets/img/posts/2024-01/pexels-pixabay-236482.jpg
     alignment: 100%
 ---
 
