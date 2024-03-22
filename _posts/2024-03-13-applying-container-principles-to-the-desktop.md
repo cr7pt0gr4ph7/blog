@@ -1,14 +1,14 @@
 ---
 layout: article
 title: Applying container principles to the desktop
-tags: ["Linux"]
+tags: ["Linux","Bluefin"]
 permalink: /articles/applying-container-principles-to-the-desktop/
 article_header:
   type: overlay
   theme: dark
   background_color: "#364F59"
   background_image:
-    src: assets/img/posts/2024-01/pexels-pixabay-236482.jpg
+    src: assets/img/posts/2024-03/pexels-pixabay-236482.jpg
     alignment: 100%
 ---
 
