@@ -116,7 +116,7 @@ GitHub will automatically build an updated image once per day, which your local 
 My own Bluefin build setup can be found at [cr7pt0gr4ph7/bluefin], but there isn't anything to interesting to see there,
 except for a few additional installed packages.
 
-[previous article]: ./2024-03-13-applying-container-principles-to-the-desktop.md
+[previous article]: {% link _posts/2024-03-13-applying-container-principles-to-the-desktop.md %}
 [Bluefin]: https://projectbluefin.io/
 [GitHub Actions]: https://github.com/features/actions
 [package-access-control]: https://docs.github.com/en/packages/learn-github-packages/configuring-a-packages-access-control-and-visibility
