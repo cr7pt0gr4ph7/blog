@@ -1,6 +1,18 @@
 @import "components/code-preview.scss";
 @import "components/webfonts.scss";
 
+/*****************************
+ * Customize the page header *
+ *****************************/
+
+.header .header__brand a {
+    font-weight: 600;
+
+    &, &:link, &:visited {
+        color: #555;
+    }
+}
+
 /***************************************
  * Customize the article header layout *
  ***************************************/
