@@ -4,7 +4,8 @@
   font-weight: 300 800;
   font-stretch: 100%;
   font-display: swap;
-  src: url(../webfonts/OpenSans-Italic-VariableFont_wdth,wght.woff2) format('woff2'), url(../webfonts/OpenSans-Italic-VariableFont_wdth,wght.ttf) format('ttf');
+  src: url(../webfonts/OpenSans-Italic-VariableFont_wdth,wght.woff2) format('woff2-variations');
+  src: url(../webfonts/OpenSans-Italic-VariableFont_wdth,wght.woff2) format('woff2') tech('variations');
 }
 
 @font-face {
@@ -12,5 +13,6 @@
   font-weight: 300 800;
   font-stretch: 100%;
   font-display: swap;
-  src: url(../webfonts/OpenSans-VariableFont_wdth,wght.woff2) format('woff2'), url(../webfonts/OpenSans-VariableFont_wdth,wght.ttf) format('ttf');
+  src: url(../webfonts/OpenSans-VariableFont_wdth,wght.woff2) format('woff2-variations');
+  src: url(../webfonts/OpenSans-VariableFont_wdth,wght.woff2) format('woff2') tech('variations');
 }
