@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Creating your own Bluefin distribution
+subtitle: How to tame your very own dinosaur([-themed](https://projectbluefin.io/#:~:text=Why%20dinosaurs%3F%3F) Linux distribution)
 tags: ["Linux","Bluefin"]
 permalink: /articles/creating-your-own-bluefin-distribution/
 summary: |
