@@ -216,6 +216,15 @@ ul.toc {
     }
 }
 
+/***********************************
+ * Customize the article footnotes *
+ ***********************************/
+
+.article__content .footnotes {
+    font-size: 0.85rem;
+    color: #888;
+}
+
 /*************************
  * Customize search form *
  *************************/
