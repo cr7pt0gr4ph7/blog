@@ -3,6 +3,9 @@ layout: article
 title: Creating your own Bluefin distribution
 tags: ["Linux","Bluefin"]
 permalink: /articles/creating-your-own-bluefin-distribution/
+summary: |
+  I've migrated my personal laptop from Windows to a Bluefin-based Linux system.
+  As promised, here is a guide on how to setup your own Bluefin-based image builds using [GitHub Actions].
 article_header:
   type: overlay
   theme: dark
@@ -12,9 +15,11 @@ article_header:
     alignment: 100%
 ---
 
-As mentioned in a [previous article],
-I've migrated from Windows to a [Bluefin]-based Linux system.
-As promised, here is a guide on how to setup your own Bluefin-based image builds using [GitHub Actions].
+As mentioned in a [previous article], I've migrated my personal laptop from Windows to a [Bluefin]-based Linux system
+&ndash; see that article for my rationale as well as an introduction to Bluefin and immutable-image-based Linux systems.
+Today's article will instead be a guide on how to setup your own Bluefin-based image builds using [GitHub Actions],
+so you can have both a fully customizable system _and_ the stability advantages of an image-based update workflow.
+Let's begin!
 
 ## Step 1: Setup your custom Bluefin distribution
 
@@ -22,7 +27,6 @@ As promised, here is a guide on how to setup your own Bluefin-based image builds
 
 Step #1 is to create a home on GitHub for your own custom distribution by creating a fork of [ublue-os/bluefin].
 Note that the forked repository needs to be public if you want to use GitHub Actions with a free GitHub account.
-
 
 ### Step 1.2: Create an image signing key
 
