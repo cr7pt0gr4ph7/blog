@@ -14,6 +14,7 @@ article_header:
   background_image:
     src: assets/img/posts/2024-03/pexels-pixabay-236482.jpg
     alignment: 100%
+  show_subtitle: true
 ---
 
 As mentioned in a [previous article], I've migrated my personal laptop from Windows to a [Bluefin]-based Linux system
