@@ -1,7 +1,6 @@
 ---
 layout: article
 title: Creating your own Bluefin distribution
-subtitle: How to tame your very own dinosaur([-themed](https://projectbluefin.io/#:~:text=Why%20dinosaurs%3F%3F) Linux distribution)
 tags: ["Linux","Bluefin"]
 permalink: /articles/creating-your-own-bluefin-distribution/
 summary: |
@@ -14,7 +13,6 @@ article_header:
   background_image:
     src: assets/img/posts/2024-03/pexels-pixabay-236482.jpg
     alignment: 100%
-  show_subtitle: true
 ---
 
 As mentioned in a [previous article], I've migrated my personal laptop from Windows to a [Bluefin]-based Linux system
