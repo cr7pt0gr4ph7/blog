@@ -12,7 +12,7 @@ article_header:
     alignment: 100%
 ---
 
-I've recently migrated my personal PC from Windows to Linux, mainly because I did not see any value
+I've recently migrated my personal laptop from Windows to Linux, mainly because I did not see any value
 in purchasing yet another Windows version, when I mainly use it to run cross-platform applications
 and a web browser.
 
@@ -48,6 +48,11 @@ and then use the resulting immutable images as the basis for your local system.
 > _(Initial Install) &rarr; Install B &rarr; Install C &rarr; (B and C installed)_
 >
 > As another benefit, anyone else in your department can use the same base image as you &ndash; which helps to minimize configuration drift within your team.
+
+This approach of treating the whole (base) system as a single unit (i.e. kernel and system services)
+is one of the puzzle pieces that allow e.g. Android phones and Chromebooks to be quite maintenance-free
+from the perspective of the typical end user.
+[Fedora Silverblue] takes that idea, but applies it to an open Linux desktop instead of a closed, proprietary system.
 
 [Bluefin] builds on [Fedora Silverblue] by pre-configuring sensible defaults for everything, and giving you a ready-to-use desktop from the start.
 Bluefin DX does the same, but also preinstalls and preconfigures a number of developer tools, like Visual Studio Code.
