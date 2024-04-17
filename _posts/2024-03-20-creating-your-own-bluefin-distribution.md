@@ -18,7 +18,7 @@ article_header:
 
 As mentioned in a [previous article], I've migrated my personal laptop from Windows to a [Bluefin]-based Linux system
 &ndash; see that article for my rationale as well as an introduction to Bluefin and immutable-image-based Linux systems.
-Today's article will instead be a guide on how to setup your own Bluefin-based image builds using [GitHub Actions],
+Today's article will be a guide on how to setup your own Bluefin-based image builds using [GitHub Actions],
 so you can have both a fully customizable system _and_ the stability advantages of an image-based update workflow.
 Let's begin!
 
