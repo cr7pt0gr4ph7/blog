@@ -6,11 +6,10 @@ permalink: /articles/code-formatting-with-git-filter-branch/
 article_header:
   type: overlay
   theme: dark
-  background_color: "#364F59"
+  background_color: "#363649"
   background_image:
-    src: assets/img/posts/2024-01/pexels-scott-webb-1029604.jpg
-    blur: 4px
-    alignment: 100%
+    src: assets/img/posts/2024-02/pexels-jessica-lewis-thepaintedsquare-583847.jpg
+    alignment: 61%
 ---
 
 Imagine that you have written, prepared and rebased a beautiful Git history with multiple commits
@@ -88,8 +87,9 @@ do
 done
 ```
 
-<details>
+<details markdown="1">
 <summary>Example output (truncated)</summary>
+<div class="boilerplate-content" markdown="block">
 ```diff
 1:  0220c3fafb = 1:  294f62bebc StarDelegate: Fix: Ensure consistency of commitAndCloseEditor with QAbstractItemDelegatePrivate::_q_commitDataAndCloseEditor
 1:  069a549d46 = 1:  c935a14a50 WTrackTableView: Add WTrackTableView::editRequested signal
@@ -190,6 +190,7 @@ done
     + ## tools/__pycache__/githelper.cpython-310.pyc (deleted) ##
     + Binary files tools/__pycache__/githelper.cpython-310.pyc and /dev/null differ
 ```
+</div>
 </details>
 
 ## Bonus: Custom code formatting tools
