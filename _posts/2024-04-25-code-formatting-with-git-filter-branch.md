@@ -38,17 +38,17 @@ git filter-branch --tree-filter "pre-commit run || true" -- main..HEAD
 
 `git filter-branch` is a [relatively simple (but very powerful if used correctly) shell script][git-filter-branch.sh] included with Git.
 For each commit between `main` (exclusive) and `HEAD` (inclusive), it will:
-* Checkout[^1] the contents of that commit.
-* Invoke the command specified by `--tree-filter`.
-  In our case, that invokes [`pre-commit run`], which, when configured correctly through a `.pre-commit-config.yaml` file, will:
-  * Get a list of all files that have changed.
-  * Invoke each hook configured in `.pre-commit-config.yaml` with the list of changed files.
+1. Checkout[^1] the contents of that commit.
+2. Invoke the command specified by `--tree-filter`.
+   In our case, that invokes [`pre-commit run`], which, when configured correctly through a `.pre-commit-config.yaml` file, will:
+   * Get a list of all files that have changed.
+   * Invoke each hook configured in `.pre-commit-config.yaml` with the list of changed files.
 
-    In the case of our example project, this will apply a code format checker to all changed files.
-    When it finds code format problems, it autoformats the problematic files, and returns a non-zero exit code.
-    The `|| true` is used to ignore the non-zero exit code; otherwise, `git filter-branch` thinks that the command failed and exits failed.
-* Add all files that were changed by the `--tree-filter` command to the staging area.
-* Append the result as a new commit to the rewritten Git history.
+     In the case of our example project, this will apply a code format checker to all changed files.
+     When it finds code format problems, it autoformats the problematic files, and returns a non-zero exit code.
+     The `|| true` is used to ignore the non-zero exit code; otherwise, `git filter-branch` thinks that the command failed and exits failed.
+3. Add all files that were changed by the `--tree-filter` command to the staging area.
+4. Append the result as a new commit to the rewritten Git history.
 
 [^1]: Note that what `git filter-branch` does is subtly different from a normal `git checkout`. The index (aka. staging area) and working directory will match the state as of that commit, but `HEAD` will not be updated.
 
