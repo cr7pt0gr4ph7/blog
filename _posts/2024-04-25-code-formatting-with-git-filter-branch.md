@@ -88,8 +88,8 @@ do
 done
 ```
 
-Example output (truncated):
-
+<details>
+<summary>Example output (truncated)</summary>
 ```diff
 1:  0220c3fafb = 1:  294f62bebc StarDelegate: Fix: Ensure consistency of commitAndCloseEditor with QAbstractItemDelegatePrivate::_q_commitDataAndCloseEditor
 1:  069a549d46 = 1:  c935a14a50 WTrackTableView: Add WTrackTableView::editRequested signal
@@ -190,6 +190,7 @@ Example output (truncated):
     + ## tools/__pycache__/githelper.cpython-310.pyc (deleted) ##
     + Binary files tools/__pycache__/githelper.cpython-310.pyc and /dev/null differ
 ```
+</details>
 
 ## Bonus: Custom code formatting tools
 
@@ -218,5 +219,3 @@ Enjoy!
 [`pre-commit run`]: https://pre-commit.com/#pre-commit-run
 [clang-format.py]: https://github.com/mixxxdj/mixxx/blob/67a41d9dcdb06b37f57be8e88978756140d05ff2/tools/clang_format.py
 [mixxx]: https://github.com/mixxxdj/mixxx
-[gitrevisions]: https://git-scm.com/docs/gitrevisions
-[git rev-list]: https://git-scm.com/docs/git-rev-list
