@@ -193,8 +193,12 @@ Example output (truncated):
 
 ## Bonus: Custom code formatting tools
 
-Your custom tool should accept a list of files to format either via stdin, or as command line arguments.
-It should format the specified files in-place. Your `--tree-filter` should then look something like this.
+You can still employ `git filter-branch` even if you do not use the `pre-commit` tool.
+The only requirement is that you have a custom that accepts a list of files to format
+either via stdin, or as command line arguments, and writes the formatted files back
+to their original locations.
+
+Your `--tree-filter` should then look something like this, either inline or wrapped into a shell script file:
 
 ```bash
 # Pass the list of changed files via stdin
