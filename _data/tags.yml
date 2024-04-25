@@ -1,3 +1,12 @@
+show_colors: false
 tags:
-  "Git":
-    background_color: #ff7d66
+  CSS:
+    background_color: "#babaff"
+  Git:
+    border_color: "#f78875"
+    background_color: "#ff7d66"
+  Jekyll:
+    background_color: "#777799"
+
+# "#777799"
+# "#babaff" "#adadff"

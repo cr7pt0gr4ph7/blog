@@ -51,9 +51,16 @@
           {%- for _tag in include.article.tags -%}
             {%- assign _tag_path = __return -%}
             {%- assign _tag_encode = _tag | strip | url_encode } -%}
+            {%- assign _tag_info = site.data.tags.tags[_tag] -%}
+            {%- assign _tag_background_color = _tag_info.background_color -%}
             <li>
               <a class="button button--secondary button--pill button--sm"
-                href="{{ _tag_path | append: _tag_encode | replace: '//', '/' }}">{{ _tag }}</a>
+                href="{{ _tag_path | append: _tag_encode | replace: '//', '/' }}" {% if site.data.tags.show_colors -%}
+                style="{%
+                  if _tag_background_color
+                    %}background-color: {{ _tag_background_color }};{%
+                  endif
+                  %}"{% endif %}>{{ _tag }}</a>
             </li>
           {%- endfor -%}
         </ul>
