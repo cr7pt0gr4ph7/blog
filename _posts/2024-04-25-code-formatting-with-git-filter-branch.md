@@ -29,7 +29,7 @@ Git _does_ try to prevent you from shooting yourself in the foot as good as it c
 but it can't prevent badly written custom scripts from accidentally doing `rm -rf .git` or `rm -rf /`,
 removing or modifying the wrong files etc.
 
-TL;DR: The following snipped will apply `pre-commit` to each commit as if it was just being committed:
+**TL;DR:** The following snipped will apply `pre-commit` to each commit as if it was just being committed:
 
 ```bash
 git filter-branch --tree-filter "pre-commit run || true" -- main..HEAD
@@ -39,9 +39,10 @@ git filter-branch --tree-filter "pre-commit run || true" -- main..HEAD
 For each commit between `main` (exclusive) and `HEAD` (inclusive), it will:
 * Checkout[^1] the contents of that commit.
 * Invoke the command specified by `--tree-filter`.
-  In our case, that invokes [`pre-commit`], which, when configured correctly, will:
+  In our case, that invokes [`pre-commit run`], which, when configured correctly through a `.pre-commit-config.yaml` file, will:
   * Get a list of all files that have changed.
   * Invoke each hook configured in `.pre-commit-config.yaml` with the list of changed files.
+
     In the case of our example project, this will apply a code format checker to all changed files.
     When it finds code format problems, it autoformats the problematic files, and returns a non-zero exit code.
     The `|| true` is used to ignore the non-zero exit code; otherwise, `git filter-branch` thinks that the command failed and exits failed.
@@ -75,7 +76,7 @@ The mapping file can be viewed using the CLI:
 ... [truncated for brevity]
 ```
 
-We can use this mapping information to show the differences between the original and the reformatted commits:
+We can feed this mapping information into [`git range-diff`] to show the differences between the original and the reformatted commits:
 
 ```bash
 git cat-file -p git-rewrite-state:filter.map | while read oldnewrefline
@@ -86,6 +87,8 @@ do
   git range-diff $oldref^..$oldref $newref^..$newref
 done
 ```
+
+Example output (truncated):
 
 ```diff
 1:  0220c3fafb = 1:  294f62bebc StarDelegate: Fix: Ensure consistency of commitAndCloseEditor with QAbstractItemDelegatePrivate::_q_commitDataAndCloseEditor
@@ -186,60 +189,6 @@ done
     +
     + ## tools/__pycache__/githelper.cpython-310.pyc (deleted) ##
     + Binary files tools/__pycache__/githelper.cpython-310.pyc and /dev/null differ
-1:  b4990db5f7 ! 1:  7a5c49bf5d StarDelegate: Fix: Defer the restore action to avoid breaking QAbstractItemView
-    @@ src/library/tabledelegates/stardelegate.h: class StarDelegate : public TableItem
-        private:
-          void openPersistentRatingEditor(const QModelIndex& index);
-     @@ src/library/tabledelegates/stardelegate.h: class StarDelegate : public TableItemDelegate {
-    +     void restorePersistentRatingEditor(const QModelIndex& index);
-    + 
-          enum PersistentEditorState {
-    -       PersistentEditor_NotOpen,
-    -       PersistentEditor_Open,
-    --      PersistentEditor_ShouldRestore
-    +-        PersistentEditor_NotOpen,
-    +-        PersistentEditor_Open,
-    +-        PersistentEditor_ShouldRestore
-    ++      PersistentEditor_NotOpen,
-    ++      PersistentEditor_Open,
-     +      PersistentEditor_ShouldRestore,
-     +      PersistentEditor_InDeferredRestore
-          };
-1:  b92666ac14 = 1:  c1f4db50c7 StarDelegate: Refactor: Rename m_isOneCellInEditMode to m_isPersistentEditorOpen
-1:  b9bd78bf35 = 1:  6d96966cbe StarEditor: Feature: Add keyboard controls for changing the star rating
-1:  bab9483abf = 1:  9ca4a11ee3 StarEditor: Adapt style_palemoon.qss.
-1:  bf84ac9ab6 = 1:  bcafadc29e StarEditor: Add different styles for "focus" vs. "focus & in edit mode"
-1:  c0ac95e7d5 = 1:  e703a178cb Update style_palemoon.qss
-1:  de8d262c95 = 1:  570a0ce4f2 StarDelegate: Connect to WTrackTableView::editRequested
-1:  ed0475921d = 1:  9e7254bce6 StarDelegate: Detect all cases where the mouse leaves the editor control
-1:  ef9699221c = 1:  db66ba2872 StarEditor: Feature: Add different styles for "focus" vs. "focus & in edit mode"
-1:  f10b1bae7f ! 1:  ac6bdefb3f StarDelegate: Defer the restore action to avoid breaking QAbstractItemView
-    @@ src/library/tabledelegates/stardelegate.h: class StarDelegate : public TableItem
-        private:
-          void openPersistentRatingEditor(const QModelIndex& index);
-     @@ src/library/tabledelegates/stardelegate.h: class StarDelegate : public TableItemDelegate {
-    +     void restorePersistentRatingEditor(const QModelIndex& index);
-    + 
-          enum PersistentEditorState {
-    -       PersistentEditor_NotOpen,
-    -       PersistentEditor_Open,
-    --      PersistentEditor_ShouldRestore
-    +-        PersistentEditor_NotOpen,
-    +-        PersistentEditor_Open,
-    +-        PersistentEditor_ShouldRestore
-    ++      PersistentEditor_NotOpen,
-    ++      PersistentEditor_Open,
-     +      PersistentEditor_ShouldRestore,
-     +      PersistentEditor_InDeferredRestore
-          };
-1:  f410ececd5 ! 1:  3663382cea StarEditor: Work around race condition of MousePressed/MouseReleased vs. focus handling
-    @@ src/library/tabledelegates/stareditor.cpp: bool StarEditor::eventFilter(QObject*
-              emit editingFinished();
-              break;
-          }
-    +
-    + ## tools/__pycache__/githelper.cpython-310.pyc (deleted) ##
-    + Binary files tools/__pycache__/githelper.cpython-310.pyc and /dev/null differ
 ```
 
 ## Bonus: Custom code formatting tools
@@ -258,11 +207,12 @@ your_code_formatter "${changed_files[@]}"
 
 Enjoy!
 
-[`pre-commit`]: https://pre-commit.com/
+[`git range-diff`]: https://git-scm.com/docs/git-range-diff
 [`git filter-branch`]: https://git-scm.com/docs/git-filter-branch
 [git-filter-branch.sh]: https://github.com/git/git/blob/v2.44.0/git-filter-branch.sh
+[`pre-commit`]: https://pre-commit.com/
+[`pre-commit run`]: https://pre-commit.com/#pre-commit-run
 [clang-format.py]: https://github.com/mixxxdj/mixxx/blob/67a41d9dcdb06b37f57be8e88978756140d05ff2/tools/clang_format.py
 [mixxx]: https://github.com/mixxxdj/mixxx
 [gitrevisions]: https://git-scm.com/docs/gitrevisions
-[pre-commit run]: https://pre-commit.com/#pre-commit-run
 [git rev-list]: https://git-scm.com/docs/git-rev-list
