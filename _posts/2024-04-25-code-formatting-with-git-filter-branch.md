@@ -28,6 +28,8 @@ Git _does_ try to prevent you from shooting yourself in the foot as good as it c
 but it can't prevent badly written custom scripts from accidentally doing `rm -rf .git` or `rm -rf /`,
 removing or modifying the wrong files etc.
 
+## Getting started: Basic usage
+
 **TL;DR:** The following snipped will apply `pre-commit` to each commit as if it was just being committed:
 
 ```bash
@@ -53,7 +55,7 @@ For each commit between `main` (exclusive) and `HEAD` (inclusive), it will:
 [^2]: The [project][mixxx] that caused this article to be written
 even goes a step further and formats *only those lines that were actually changed* using a [custom Python script][clang-format.py] and `clang`.
 
-## Listing the changes
+## Listing the changes using `git diff`
 
 We can improve upon this by showing how the contents of each commit have changed due to the code formatting.
 For this, we need to slightly modify our `git filter-branch` command, such that it looks like this:
