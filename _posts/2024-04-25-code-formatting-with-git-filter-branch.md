@@ -154,10 +154,6 @@ done
     @@ src/library/tabledelegates/stareditor.cpp: QSize StarEditor::sizeHint() const {
           m_styleOption.state |= QStyle::State_MouseOver;
           m_styleOption.rect = rect();
-      
-    +
-    + ## tools/__pycache__/githelper.cpython-310.pyc (new) ##
-    + Binary files /dev/null and tools/__pycache__/githelper.cpython-310.pyc differ
 1:  7ea3e5ccba = 1:  f88763f02b StarDelegate: Fix: Detect all cases where the mouse leaves the editor control
 1:  83d48dfe67 = 1:  043d180844 StarEditor: Add keyboard controls for editing
 1:  86738bd226 = 1:  af4cfc8279 StarDelegate: Fix: Workaround for bug of closePersistentEditor
@@ -180,17 +176,11 @@ done
           if (m_styleOption.state & QStyle::State_HasFocus) {
               TableItemDelegate::drawBorder(&painter, m_focusBorderColor, m_styleOption.rect);
           }
-    +
-    + ## tools/__pycache__/githelper.cpython-310.pyc (new) ##
-    + Binary files /dev/null and tools/__pycache__/githelper.cpython-310.pyc differ
 1:  aec2c3a767 ! 1:  6a1d98bba8 StarEditor: Fix: Work around race condition of MousePressed/MouseReleased vs. focus handling
     @@ src/library/tabledelegates/stareditor.h: class StarEditor : public QWidget {
      +    int m_deferredStarCount;
           bool m_isKeyboardEditMode;
       };
-    +
-    + ## tools/__pycache__/githelper.cpython-310.pyc (deleted) ##
-    + Binary files tools/__pycache__/githelper.cpython-310.pyc and /dev/null differ
 ```
 </div>
 </details>
