@@ -52,8 +52,7 @@ For each commit between `main` (exclusive) and `HEAD` (inclusive), it will:
 
 [^1]: Note that what `git filter-branch` does is subtly different from a normal `git checkout`. The index (aka. staging area) and working directory will match the state as of that commit, but `HEAD` will not be updated.
 
-[^2]: The [project][mixxx] that caused this article to be written
-even goes a step further and formats *only those lines that were actually changed* using a [custom Python script][clang-format.py] and `clang`.
+[^2]: The [project][mixxx] that caused this article to be written even goes a step further and formats *only those lines that were actually changed* using a [custom Python script][clang-format.py] and `clang`.
 
 ## Listing the changes using `git diff`
 
