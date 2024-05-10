@@ -1,4 +1,4 @@
-{%- assign _excerpt_truncate = include.excerpt_truncate | default: 250 -%}
+{%- assign _excerpt_truncate = include.excerpt_truncate | default: 200 -%}
 
 {%- assign _excerpt_type = include.excerpt_type -%}
 
@@ -30,7 +30,7 @@
     {%- assign _currentmonth = _article.date | date: '%B %Y' -%}
     {%- if _currentmonth != _month -%}
       {%- unless forloop.first -%}
-        <section class="article-list__month-header"><h2>{{ _currentmonth }}</h2></section>
+        <section class="article-list__month-header"><h2>Archive: {{ _currentmonth }}</h2></section>
       {%- endunless -%}
       {%- assign _month = _currentmonth -%}
     {%- endif -%}
@@ -93,7 +93,7 @@
               </div>
             {%- endif -%}
             {%- if include.show_readmore -%}
-              <p><a class="read-more-link" href="{{ _article_url }}">&rarrhk; {{ _locale_readmore }}</a></p>
+              <p><a class="read-more-link" href="{{ _article_url }}">&rarrhk; Continue reading&hellip;</a></p>
             {%- endif -%}
           </div>
         </div>
