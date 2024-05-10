@@ -1,5 +1,5 @@
 .page--articles .page__main-inner {
-    background: #f2f2f2;
+    background: #f6f6f6;
 }
 
 .layout--home .pagination {
@@ -21,25 +21,31 @@
         background: #f9f9f9;
         border-radius: 0.5rem;
         padding: 0.5rem 1rem;
-        box-shadow: 1px 1px 3px 1px #f2f2e388;
-        transition: 0.5s linear box-shadow;
         border: 1px solid #f0f0f0;
+        border: 2px solid hsl(249 53% 92%);
+        border: 2px solid hsl(249 53% 95%);
 
-        &:hover {
-            box-shadow: 1px 1px 3px 1px #f2f2e3ff;
-            transition: 1.5s linear box-shadow;
+        &,
+        &:not(:last-child) {
+            margin-bottom: 0;
         }
 
-        &:first-child, &:nth-child(10n+1), &:nth-child(10n+7) {
+        box-shadow: 1px 1px 3px 1px #f2f2e388;
+
+        &:first-child,
+        &:nth-child(10n+1),
+        &:nth-child(10n+7) {
             flex-basis: calc(15rem * 1.618);
         }
 
         &:first-child {
             background: hsl(240, 37%, 92%);
+            border-color: hsl(240, 37%, 92%);
         }
 
         h2.item__header {
             font-size: 1.25rem;
+            font-size: 1.5rem;
         }
 
         position: relative;
@@ -56,7 +62,12 @@
 
     /* Colored tag buttons */
 
-    .button--secondary, .button--secondary:link, .button--secondary:visited {
+    --tag-bg-color: hsl(189, 50%, 95%);
+    --tag-hover-color: hsl(189, 50%, 90%);
+
+    .button--secondary,
+    .button--secondary:link,
+    .button--secondary:visited {
         color: var(--tag-text-color, #333);
         background-color: var(--tag-bg-color, #f2f2f2);
     }
@@ -71,9 +82,14 @@
     .button--secondary.tag--flatpak,
     .button--secondary.tag--git,
     .button--secondary.tag--jekyll {
-        --tag-text-color: hsl(24, 100%, 20%);
         --tag-bg-color: hsl(24, 100%, 80%);
         --tag-hover-color: hsl(24, 100%, 70%);
+    }
+
+    .article-tag--flatpak,
+    .article-tag--git,
+    .article-tag--jekyll {
+        --tag-highlight-color: hsl(12, 100%, 70%);
     }
 
     /* Tag category: Linux */
@@ -98,8 +114,13 @@
 
     /* Tag category: Series */
 
+    .button--secondary.tag--articles,
+    .button--secondary.tag--how-to,
     .button--secondary.tag--discoveries-of-the-week {
-        &, &:link, &:visited {
+
+        &,
+        &:link,
+        &:visited {
             padding: 0.325rem 0.5rem;
             padding: 0.15rem 0.4rem;
             border: 0.175rem solid #e2e2e2;
