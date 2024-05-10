@@ -115,7 +115,7 @@ visual feedback on hover for most out-of-the-box controls, which would be import
 
 - **Platforms:**
   - **Available Platforms:** ✔️ Android, ✔️ iOS, ✔️ Web
-  - **Code Sharing:** ✔️ Code is multiplatform by default, but you can easily write 
+  - **Code Sharing:** ✔️ Code is multiplatform by default, but you can easily write platform-specific add-ons.
 
 - **User Interface:**
   - **Premade UI components** ✔️
