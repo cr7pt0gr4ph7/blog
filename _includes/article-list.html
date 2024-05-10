@@ -1,4 +1,4 @@
-{%- assign _excerpt_truncate = include.excerpt_truncate | default: 350 -%}
+{%- assign _excerpt_truncate = include.excerpt_truncate | default: 250 -%}
 
 {%- assign _excerpt_type = include.excerpt_type -%}
 
@@ -14,7 +14,7 @@
 {%- endif -%}
 
 {%- if include.type == 'item' -%}
-<div class="article-list items items--divided">
+<div class="article-list items items--flex">
 {%- elsif include.type == 'brief' -%}
 <div class="article-list items">
 {%- elsif include.type == 'grid' -%}
@@ -55,7 +55,19 @@
           </div>
         {%- endif -%}
         <div class="item__content">
+          {%- if include.show_info -%}
+            {%- include snippets/assign.html target=site.data.variables.default.page.pageview
+              source0=_article.pageview -%}
+            {%- assign _show_pageview = __return -%}
+            {%- include article-info.html article=_article semantic=false show_tags=true show_author=false show_pageview=false show_reading_time=false show_date=false -%}
+          {%- endif -%}
           <header><a href="{{ _article_url }}"><h2 itemprop="headline" class="item__header">{{ _article.title }}</h2></a></header>
+          {%- if include.show_info -%}
+            {%- include snippets/assign.html target=site.data.variables.default.page.pageview
+              source0=_article.pageview -%}
+            {%- assign _show_pageview = __return -%}
+            {%- include article-info.html article=_article show_author=false show_tags=false show_pageview=_show_pageview -%}
+          {%- endif -%}
           <div class="item__description">
             {%- if _article.excerpt and include.show_excerpt -%}
               <div class="article__content" itemprop="description articleBody">
@@ -70,12 +82,6 @@
               <p><a href="{{ _article_url }}">{{ _locale_readmore }}</a></p>
             {%- endif -%}
           </div>
-          {%- if include.show_info -%}
-            {%- include snippets/assign.html target=site.data.variables.default.page.pageview
-              source0=_article.pageview -%}
-            {%- assign _show_pageview = __return -%}
-            {%- include article-info.html article=_article show_pageview=_show_pageview -%}
-          {%- endif -%}
         </div>
       </article>
 

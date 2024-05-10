@@ -1,0 +1,20 @@
+.items--flex {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5em;
+    align-items: stretch;
+    row-gap: 5em;
+
+    &>.item {
+        flex: 1 1 auto;
+        flex-basis: 15em;
+
+        &:first-child {
+            flex-basis: calc(15em * 1.618);
+        }
+
+        h2.item__header {
+            font-size: 1.25rem;
+        }
+    }
+}
