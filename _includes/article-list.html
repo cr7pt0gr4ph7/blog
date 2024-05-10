@@ -35,11 +35,17 @@
       {%- assign _article_cover = __return -%}
     {%- endif -%}
 
+    {%- capture tags_css_classes -%}
+      {%- for _tag in _article.tags -%}
+        {{ _tag | slugify: "latin" | prepend: " article-tag--" }}
+      {%- endfor -%}
+    {%- endcapture -%}
+
     {%- if include.type == 'item' -%}
       {%- if include.article_type == 'BlogPosting' -%}
-        <article class="item" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="item{{ tags_css_classes }}" itemscope itemtype="http://schema.org/BlogPosting">
       {%- else -%}
-        <article class="item">
+        <article class="item{{ tags_css_classes }}">
       {%- endif -%}
         {%- if _article.cover and include.show_cover-%}
           {%- include snippets/get-nav-url.html path=_article.cover -%}
