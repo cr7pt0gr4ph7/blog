@@ -7,6 +7,9 @@ redirect_from:
   - /articles/crossplatform-app-frameworks-expo-vs-compose
   - /2024/01/23/crossplatform-app-frameworks-expo-vs-compose
   - /2024/01/23/crossplatform-app-frameworks-expo-vs-compose/
+excerpt: |
+  While toying around with writing a custom note-taking, CRM-like application for my personal use,
+  I was surveying the current landscape of cross-platform frameworks for mobile app plus web development.
 article_header:
     type: overlay
     theme: dark
