@@ -16,5 +16,16 @@
         h2.item__header {
             font-size: 1.25rem;
         }
+
+        position: relative;
+
+        .read-more-link::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
     }
 }
