@@ -1,7 +1,7 @@
 ---
 layout: article
 title: How to apply a code formatter to a Git history
-tags: ["Git","Git Magic"]
+tags: ["How-to","Git","Git Magic"]
 permalink: /articles/code-formatting-with-git-filter-branch/
 article_header:
   type: overlay
@@ -116,7 +116,7 @@ done
     @@ src/library/tabledelegates/stardelegate.cpp: void StarDelegate::commitAndCloseEd
       void StarDelegate::editRequested(const QModelIndex &index, QAbstractItemView::EditTrigger trigger, QEvent *event) {
           Q_UNUSED(event);
-      
+
     -@@ src/library/tabledelegates/stardelegate.cpp: void StarDelegate::editRequested(const QModelIndex &index, QAbstractItemView::Ed
     +     // This slot is called when an edit is requested for ANY cell on the
           // QTableView but the code should only be executed on a column with a

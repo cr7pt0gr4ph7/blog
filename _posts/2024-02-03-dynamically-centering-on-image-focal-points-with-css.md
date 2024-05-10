@@ -2,6 +2,7 @@
 layout: article
 title: Dynamically centering an image via CSS
 subtitle: How to keep the focal point of a background image visible on different screen sizes
+tags: ["How-to", "CSS", "In-depth"]
 permalink: /articles/dynamically-centering-an-image-via-css/
 redirect_from:
   - /articles/dynamically-centering-an-image-via-css/
@@ -17,7 +18,6 @@ article_header:
     src: assets/img/posts/2024-02/pexels-pixabay-235990.jpg
     alignment: 100%
     blur: 10px
-tags: ["CSS", "In-depth"]
 ---
 
 Well, imagine this: You have website with a big background image, and you want it to work well across all screen sizes.

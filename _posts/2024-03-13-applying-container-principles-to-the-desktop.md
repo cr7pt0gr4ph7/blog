@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Applying container principles to the desktop
-tags: ["Linux","Bluefin"]
+tags: ["Articles", "Linux","Bluefin"]
 permalink: /articles/applying-container-principles-to-the-desktop/
 article_header:
   type: overlay

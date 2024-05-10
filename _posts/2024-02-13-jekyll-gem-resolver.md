@@ -1,7 +1,7 @@
 ---
 type: article
 title: Using SASS files from Ruby gems with Jekyll
-tags: ["Jekyll"]
+tags: ["How-to", "Jekyll"]
 permalink: /articles/using-sass-files-from-ruby-gems-with-jekyll/
 redirect_from:
   - /articles/using-sass-files-from-ruby-gems-with-jekyll
@@ -67,7 +67,7 @@ sass:
     - 'gem:bootstrap/assets/stylesheets'
 
 gem_resolver:
-  transform: # Specify where gem references might be found 
+  transform: # Specify where gem references might be found
     - sass.load_paths
 ```
 

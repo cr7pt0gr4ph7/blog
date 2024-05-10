@@ -1,7 +1,7 @@
 ---
 layout: article
 title: A New Beginning
-tags: General Personal
+tags: Articles General Personal
 permalink: /articles/a-new-beginning/
 redirect_from:
   - /articles/a-new-beginning

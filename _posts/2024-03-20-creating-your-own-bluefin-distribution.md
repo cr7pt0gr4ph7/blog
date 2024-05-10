@@ -1,11 +1,14 @@
 ---
 layout: article
 title: Creating your own Bluefin distribution
-tags: ["Linux","Bluefin"]
+tags: ["How-to","Linux","Bluefin"]
 permalink: /articles/creating-your-own-bluefin-distribution/
+excerpt: |
+  As mentioned previously, I've migrated my personal laptop from Windows to a Bluefin-based Linux system.
+  Today's article will be a guide on how to setup your own Bluefin-based image builds using GitHub Actions.
 summary: |
   I've migrated my personal laptop from Windows to a Bluefin-based Linux system.
-  As promised, here is a guide on how to setup your own Bluefin-based image builds using [GitHub Actions].
+  As promised, here is a guide on how to setup your own Bluefin-based image builds using GitHub Actions.
 article_header:
   type: overlay
   theme: dark
@@ -45,8 +48,8 @@ which is preinstalled in the DevContainer that is configured for the bluefin rep
    ```bash
    ❯ export GITHUB_TOKEN=github_pat_<...>
    ❯ cosign generate-key-pair github://cr7pt0gr4ph7/bluefin
-   Enter password for private key: 
-   Enter password for private key again: 
+   Enter password for private key:
+   Enter password for private key again:
    Password written to COSIGN_PASSWORD github actions secret
    Private key written to COSIGN_PRIVATE_KEY github actions secret
    Public key written to COSIGN_PUBLIC_KEY github actions secret
