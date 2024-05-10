@@ -27,6 +27,14 @@
 
   {%- for _article in _sorted_list -%}
 
+    {%- assign _currentmonth = _article.date | date: '%B %Y' -%}
+    {%- if _currentmonth != _month -%}
+      {%- unless forloop.first -%}
+        <section class="article-list__month-header"><h2>{{ _currentmonth }}</h2></section>
+      {%- endunless -%}
+      {%- assign _month = _currentmonth -%}
+    {%- endif -%}
+
     {%- include snippets/prepend-baseurl.html path=_article.url -%}
     {%- assign _article_url = __return -%}
 
