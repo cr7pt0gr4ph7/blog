@@ -2,6 +2,12 @@
     background: #f2f2f2;
 }
 
+.layout--home .pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .items--flex {
     display: flex;
     flex-wrap: wrap;
