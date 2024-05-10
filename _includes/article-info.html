@@ -70,14 +70,14 @@
             {%- assign _tag_info = site.data.tags.tags[_tag] -%}
             {%- assign _tag_background_color = _tag_info.background_color -%}
             {%- assign _tag_class = _tag | slugify: "latin" | prepend: "tag--" -%}
+            {%- assign _tag_text = _tag -%}
+            {%- assign _tag_title = _tag | prepend: "Show all articles tagged as " -%}
+            {%- if include.shorten_tags and _tag_info.short_name -%}
+              {%- assign _tag_text = _tag_info.short_name | default: _tag_text -%}
+            {%- endif -%}
             <li>
-              <a class="{{ _tag_classes }} {{ _tag_class }}"
-                href="{{ _tag_path | append: _tag_encode | replace: '//', '/' }}" {% if site.data.tags.show_colors -%}
-                style="{%
-                  if _tag_background_color
-                    %}background-color: {{ _tag_background_color }};{%
-                  endif
-                  %}"{% endif %}>{{ _tag }}</a>
+              <a title="{{ _tag_title }}" class="{{ _tag_classes }} {{ _tag_class }}"
+                href="{{ _tag_path | append: _tag_encode | replace: '//', '/' }}">{{ _tag_text }}</a>
             </li>
           {%- endfor -%}
         </ul>

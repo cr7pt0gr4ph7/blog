@@ -1,12 +1,4 @@
 show_colors: false
 tags:
-  CSS:
-    background_color: "#babaff"
-  Git:
-    border_color: "#f78875"
-    background_color: "#ff7d66"
-  Jekyll:
-    background_color: "#777799"
-
-# "#777799"
-# "#babaff" "#adadff"
+  Discoveries of the Week:
+    short_name: DotW
