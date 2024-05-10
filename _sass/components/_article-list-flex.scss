@@ -2,6 +2,12 @@
     background: #f6f6f6;
 }
 
+.button--outline {
+    border: 1px solid currentColor;
+    border: 1px solid #fc4d50;
+    border: 1px solid #fc4d5088;
+}
+
 .layout--home .pagination {
     display: flex;
     flex-direction: column;
@@ -57,6 +63,17 @@
             left: 0;
             right: 0;
             bottom: 0;
+            z-index: 0;
+        }
+
+        .article__info .left-col {
+            column-gap: 0.5rem;
+        }
+
+        .article__info a {
+            position: relative;
+            z-index: 1;
+            font-size: 0.8rem;
         }
     }
 
@@ -113,6 +130,16 @@
     }
 
     /* Tag category: Series */
+
+    .button--outline.tag--articles,
+    .button--outline.tag--how-to,
+    .button--outline.tag--discoveries-of-the-week {
+        text-transform: uppercase;
+        color: #b0b0b0;
+        border-color: transparent;
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     .button--secondary.tag--articles,
     .button--secondary.tag--how-to,

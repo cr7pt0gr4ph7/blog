@@ -58,6 +58,7 @@
           {%- assign _tag_path = _paths_archive | append: '?tag=' -%}
           {%- include snippets/prepend-baseurl.html path=_tag_path -%}
           {%- assign _tag_list = include.article.tags -%}
+          {%- assign _tag_classes = include.tag_classes | default: "button button--secondary button--pill button--sm" -%}
 
           {%- if include.max_tags -%}
             {%- assign _tag_list = _tag_list | slice: 0, include.max_tags -%}
@@ -70,7 +71,7 @@
             {%- assign _tag_background_color = _tag_info.background_color -%}
             {%- assign _tag_class = _tag | slugify: "latin" | prepend: "tag--" -%}
             <li>
-              <a class="button button--secondary button--pill button--sm {{ _tag_class }}"
+              <a class="{{ _tag_classes }} {{ _tag_class }}"
                 href="{{ _tag_path | append: _tag_encode | replace: '//', '/' }}" {% if site.data.tags.show_colors -%}
                 style="{%
                   if _tag_background_color
