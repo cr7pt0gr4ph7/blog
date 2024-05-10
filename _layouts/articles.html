@@ -33,15 +33,15 @@ layout: page
 
 {%- if _articles -%}
 
-  <div class="layout--articles">
+  <div class="layout--articles" style="--dynamic-title-size: min(3.5rem, (100vw - 3rem) / 950 * 16 * 4);">
 
     {%- if site.title -%}
-      <h1 style="font-size: min(3.5rem, (100vw - 3rem) / 950 * 16 * 4);">
+      <h1 style="font-size: var(--dynamic-title-size); margin-bottom: calc(var(--dynamic-title-size) * 0.5);">
         {%- include snippets/get-nav-url.html path=_paths_root -%}
         <a href="{{ __return }}" style="color: inherit; text-decoration: none;">{{ site.title }}</a>
       </h1>
     {%- endif %}
-    <h2 style="font-variant: small-caps; color: #aaa; font-weight: 300;">
+    <h2 style="font-variant: small-caps; color: #aaa; font-weight: 300; margin-bottom: calc(var(--dynamic-title-size) * 0.25);">
       {%- if paginator.page > 1 -%}
         Recent posts | Page {{ paginator.page }}
       {%- else -%}
