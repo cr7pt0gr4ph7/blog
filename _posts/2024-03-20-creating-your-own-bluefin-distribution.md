@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Creating your own Bluefin distribution
-tags: ["How-to","Linux","Bluefin"]
+tags: ["How to","Linux","Bluefin"]
 permalink: /articles/creating-your-own-bluefin-distribution/
 excerpt: |
   As mentioned previously, I've migrated my personal laptop from Windows to a Bluefin-based Linux system.

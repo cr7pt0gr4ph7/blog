@@ -2,7 +2,7 @@
 layout: article
 title: Dynamically centering an image via CSS
 subtitle: How to keep the focal point of a background image visible on different screen sizes
-tags: ["How-to", "CSS", "In-depth"]
+tags: ["How to", "CSS", "In-depth"]
 permalink: /articles/dynamically-centering-an-image-via-css/
 redirect_from:
   - /articles/dynamically-centering-an-image-via-css/

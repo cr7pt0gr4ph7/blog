@@ -1,7 +1,7 @@
 ---
 layout: article
 title: How to apply a code formatter to a Git history
-tags: ["How-to","Git","Git Magic"]
+tags: ["How to","Git","Git Magic"]
 permalink: /articles/code-formatting-with-git-filter-branch/
 article_header:
   type: overlay
