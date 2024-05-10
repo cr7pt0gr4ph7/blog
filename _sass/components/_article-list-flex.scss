@@ -3,9 +3,10 @@
 }
 
 .button--outline {
-    border: 1px solid currentColor;
-    border: 1px solid #fc4d50;
-    border: 1px solid #fc4d5088;
+    border: 1px solid transparent;
+    &:hover {
+        border-color: currentColor;
+    }
 }
 
 .layout--home .pagination {
@@ -28,8 +29,6 @@
         border-radius: 0.5rem;
         padding: 0.5rem 1rem;
         border: 1px solid #f0f0f0;
-        border: 2px solid hsl(249 53% 92%);
-        border: 2px solid hsl(249 53% 95%);
 
         &,
         &:not(:last-child) {
@@ -39,8 +38,8 @@
         box-shadow: 1px 1px 3px 1px #f2f2e388;
 
         &:first-child,
-        &:nth-child(10n+1),
-        &:nth-child(10n+7) {
+        &:nth-of-type(10n+1),
+        &:nth-of-type(10n+7) {
             flex-basis: calc(15rem * 1.618);
         }
 
@@ -52,6 +51,7 @@
         h2.item__header {
             font-size: 1.25rem;
             font-size: 1.5rem;
+            hyphens: auto;
         }
 
         position: relative;
@@ -73,7 +73,6 @@
         .article__info a {
             position: relative;
             z-index: 1;
-            font-size: 0.8rem;
         }
     }
 
