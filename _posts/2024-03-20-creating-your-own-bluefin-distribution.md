@@ -83,8 +83,8 @@ but GitHub will remember the package visibility for all future uploads of that p
 Now that everything is ready, we can flip the lever and tell our local system to use your custom image builds instead in the future by issuing the following command:
 
 ```bash
-rpm-ostree rebase ostree-image-signed:docker://ghcr.io/<owner>/bluefin-dx:gts
-# or: rpm-ostree rebase ostree-image-signed:docker://ghcr.io/<owner>/bluefin:gts
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/<owner>/bluefin-dx:latest
+# or: rpm-ostree rebase ostree-image-signed:docker://ghcr.io/<owner>/bluefin:latest
 ```
 
 The image download usually takes a few minutes to complete.
