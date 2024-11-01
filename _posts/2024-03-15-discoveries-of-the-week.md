@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Discoveries of the Week &ndash; 2024/06: Placeholder Images & Color Palettes
+title: "Discoveries of the Week &ndash; 2024/06: Placeholder Images & Color Palettes"
 tags: ["Discoveries of the Week", "CSS", "Inspiration"]
 article_header:
   type: overlay
