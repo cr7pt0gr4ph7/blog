@@ -14,7 +14,7 @@ article_header:
 ---
 
 ## #1 &mdash; Favicons in 2024
-Moved to [Discoveries & Random Stuff: Favicons in 2024]({% link _posts/2024-02-24-favicons-in-2024.md %}).
+Moved to [Discoveries & Random Stuff: Favicons in 2024]({% link _posts/2024-02-09-favicons-in-2024.md %}).
 
 ## #2 &mdash; Browser fingerprinting
-Moved to [Discoveries & Random Stuff: Browser Fingerprinting]({% link _posts/2024-02-24-browser-fingerprinting.md %}).
+Moved to [Discoveries & Random Stuff: Browser Fingerprinting]({% link _posts/2024-02-09-browser-fingerprinting.md %}).
