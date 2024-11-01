@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Discoveries & Random Stuff: Awesome CSS Gradients, Animations & Websites"
-tags: ["Discoveries of the Week", "Jekyll", "CSS", "SVG", "Inspiration"]
+tags: ["Discoveries of the Week", "CSS", "Inspiration"]
 permalink: /articles/awesome-css-websites/
 redirect_from:
   - /articles/awesome-css-websites
