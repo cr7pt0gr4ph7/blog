@@ -1,5 +1,6 @@
 ---
 layout: article
+hidden: true
 title: "Discoveries of the Week &ndash; 2024/06: Placeholder Images & Color Palettes"
 tags: ["Discoveries of the Week", "CSS", "Inspiration"]
 article_header:
@@ -13,22 +14,7 @@ article_header:
 ---
 
 # Placeholder Images
-
-Looking for placeholder images to show off your layout?
-[Picsum.Photos](https://picsum.photos/) provides a simple placeholder image service.
-
-If you'd prefer something cuter, you might like [PlaceKitten](https://placekitten.com/) instead.
+Moved to [Discoveries & Random Stuff: Placeholder Images]({% link _posts/2024-03-15-placeholder-images.md %}).
 
 # Color Palette Creation
-
-Here are a few useful web tools for creating color palettes:
-
-* [Adobe Color Palettes](https://color.adobe.com/en/create/color-wheel):
-  Full-fledged color palette creator. Also allows extracting color palettes from images.
-* [ColorSpace](https://mycolor.space/):
-  Generate a load of different color palettes from a single base color.
-* [Khroma](https://www.khroma.co/):
-  AI-based, generates foreground plus background pairings.
-  Great if you need bright color pairings that look very flashy but which you wouldn't think of by yourself.
-* [ColorHunt](https://colorhunt.co/):
-  Crowd-sourced color palettes.
+Moved to [Discoveries & Random Stuff: Color Palette Creation]({% link _posts/2024-03-15-color-palette-creation.md %}).
