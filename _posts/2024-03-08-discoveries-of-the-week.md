@@ -14,7 +14,7 @@ article_header:
 ---
 
 # Manual IMAP commands
-Moved to [Discoveries & Random Stuff: Manual IMAP Commands](./2024-03-08-manual-imap-commands.md).
+Moved to [Discoveries & Random Stuff: Manual IMAP Commands]({% link _posts/2024-03-08-manual-imap-commands.md }).
 
 # CSS @supports directive
-Moved to [Discoveries & Random Stuff: CSS @supports directive](./2024-03-08-css-supports-directive.md).
+Moved to [Discoveries & Random Stuff: CSS @supports directive]({% link _posts/2024-03-08-css-supports-directive.md }).
