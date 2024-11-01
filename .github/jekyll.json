@@ -5,7 +5,7 @@
       "severity": "warning",
       "pattern": [
         {
-          "regexp": "^\\s*Liquid Warning: Liquid (?:syntax )?error \\(line (\\d+)\\): (.+) in (.+)$",
+          "regexp": "^(?:\\x1B\\[31m)?\\s*Liquid Warning: Liquid (?:syntax )?error \\(line (\\d+)\\): (.+) in (..*?)(?:\\x1B\\[0m)?$",
           "line": 1,
           "message": 2,
           "file": 3
@@ -17,7 +17,7 @@
       "severity": "error",
       "pattern": [
         {
-          "regexp": "^\\s*Liquid Exception: Liquid (?:syntax )?error \\(line (\\d+)\\): (.+) in (.+)$",
+          "regexp": "^(?:\\x1B\\[31m)?\\s*Liquid Exception: Liquid (?:syntax )?error \\(line (\\d+)\\): (.+) in (..*?)(?:\\x1B\\[0m)?$",
           "line": 1,
           "message": 2,
           "file": 3
