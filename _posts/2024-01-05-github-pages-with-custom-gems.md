@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Discoveries & Random Stuff: Github Pages and custom Ruby gems"
-tags: ["Discoveries of the Week", "Jekyll"]
+tags: ["Discoveries & Random Stuff", "Jekyll"]
 permalink: /articles/github-pages-with-custom-ruby-gems/
 redirect_from:
   - /articles/github-pages-with-custom-ruby-gems
