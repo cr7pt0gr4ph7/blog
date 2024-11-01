@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Discoveries & Random Stuff: Manual IMAP Access"
-tags: ["Discoveries","Random Stuff","IMAP"]
+tags: ["Discoveries & Random Stuff","IMAP"]
 permalink: /articles/manual-imap-commands-via-telnet-and-openssl/
 article_header:
   type: overlay
