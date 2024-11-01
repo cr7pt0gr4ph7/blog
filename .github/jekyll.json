@@ -1,13 +1,26 @@
 {
   "problemMatcher": [
     {
-      "owner": "jekyll",
+      "owner": "jekyll-warning",
+      "severity": "warning",
       "pattern": [
         {
-          "regexp": "^\\s*Liquid (Warning|Exception): Liquid (?:syntax )?error \\(line (\\d+)\\): (.+) in (.+)$",
-          "line": 2,
-          "message": 3,
-          "file": 4
+          "regexp": "^\\s*Liquid Warning: Liquid (?:syntax )?error \\(line (\\d+)\\): (.+) in (.+)$",
+          "line": 1,
+          "message": 2,
+          "file": 3
+        }
+      ]
+    },
+    {
+      "owner": "jekyll-error",
+      "severity": "error",
+      "pattern": [
+        {
+          "regexp": "^\\s*Liquid Exception: Liquid (?:syntax )?error \\(line (\\d+)\\): (.+) in (.+)$",
+          "line": 1,
+          "message": 2,
+          "file": 3
         }
       ]
     }
