@@ -16,7 +16,7 @@ article_header:
 ---
 
 The pace of innovation has accelerated quite a lot since I started writing HTML and CSS a few years ago
-(see as [mentioned before](./2024-01-19-discoveries-of-the-week.md)).
+(see as [mentioned before]({% link _posts/2024-01-19-discoveries-of-the-week.md }).
 
 The [`@supports` directive][mdn-supports] is really useful if you want to take full advantage
 of a new feature if supported, while providing a graceful fallback on other browsers:
