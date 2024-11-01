@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Discoveries of the Week &ndash; 2024/05
+title: Discoveries of the Week &ndash; 2024/05: Manual IMAP access & @supports in CSS
 tags: ["Discoveries of the Week", "CSS", "IMAP"]
 article_header:
   type: overlay
