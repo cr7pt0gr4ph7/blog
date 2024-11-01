@@ -40,16 +40,3 @@ and contains a nice live visualization.
 **Pros:** Easy slider-based configuration.
 
 **Cons:** Not a generic filter builder (but does not try to be one).
-
-# CSS-Only scroll shadows
-
-Scroll shadows are a useful tool for indicating to a user that they can scroll in a certain direction.
-[Lea Verou][lv-scroll-shadows] has pioneered a technique for implementing these using CSS only,
-which has been picked up by e.g. [CSS-Tricks][css-tricks-scroll-shadows].
-
-I've employed this technique in a prototype for a desktop/mobile web app for the horizontal scrolling of a (possibly very wide) breadcrumb bar.
-I wanted to avoid displaying a scroll bar, both for aesthetic and for space reasons,
-as well as for avoiding layout jumps (due to the scrollbar appearing) when resizing application window.
-
-[lv-scroll-shadows]: https://lea.verou.me/blog/2012/04/background-attachment-local/
-[css-tricks-scroll-shadows]: https://css-tricks.com/books/greatest-css-tricks/scroll-shadows/
