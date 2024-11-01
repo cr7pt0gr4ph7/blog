@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Discoveries & Random Stuff: Paint Simulations & Visual Inspiration"
-tags: ["Discoveries of the Week", "Inspiration"]
+tags: ["Discoveries & Random Stuff", "Inspiration"]
 permalink: /articles/paint-simulations-and-visual-inspiration/
 redirect_from:
   - /articles/paint-simulation-websites
