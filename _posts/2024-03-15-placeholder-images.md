@@ -1,7 +1,7 @@
 ---
 layout: article
 title: "Discoveries & Random Stuff: Placeholder Images"
-tags: ["Discoveries & Random Stuff", "CSS", "Inspiration", "Stock Photos"]
+tags: ["Discoveries & Random Stuff", "Design", "Inspiration"]
 permalink: /articles/placeholder-images/
 redirect_from:
   - /articles/placeholder-images
