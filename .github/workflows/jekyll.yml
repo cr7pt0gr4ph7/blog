@@ -47,7 +47,7 @@ jobs:
         run: |
           echo "google_site_verification: ${{ secrets.GOOGLE_SITE_VERIFICATION }}" > _config_temp.yml
       - name: Register Problem Matchers for Jekyll
-        run: echo "##[add-matcher].github/jekyll.json"
+        run: echo "::add-matcher::.github/jekyll.json"
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --config _config.yml,_config_temp.yml --baseurl "${{ steps.pages.outputs.base_path }}"
