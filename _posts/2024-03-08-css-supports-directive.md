@@ -2,7 +2,7 @@
 layout: article
 title: "Discoveries & Random Stuff: Utilizing @supports in CSS"
 permalink: /articles/css-supports-directive/
-tags: ["Discoveries", "Random Stuff", "CSS"]
+tags: ["Discoveries & Random Stuff", "CSS"]
 redirect_from:
   - /articles/css-supports-directive
 article_header:
