@@ -20,7 +20,7 @@ article_header:
 This week's post is a bit smaller that the last one, but contains some goodies nonetheless. Let's get started!
 
 ### #1 &mdash; Flowing text around and within shapes
-Moved to [Discoveries & Random Stuff: Flowing text around and within shapes]({% link _posts/2024-01-19-flowing-text-around-and-within-shapes.md%}).
+Moved to [Discoveries & Random Stuff: Flowing text around and within shapes]({% link _posts/2024-01-19-flowing-text-around-and-within-shapes.md %}).
 
 #### Quick aside: A short bit of web browser history
 Moved to [Quick aside: A short bit of browser history]({% link _posts/2024-01-19-a-short-bit-of-browser-history.md %}).
